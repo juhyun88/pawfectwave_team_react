@@ -1,0 +1,8 @@
+:root{
+    --MainBrownLight : #A97D5E;
+    --Primery : #006838;
+}
+
+.main-primery{
+    color: var(--Primery);
+}
