@@ -35,10 +35,10 @@
   
 
 </head>
-<body>
+<body class="overflow-x-hidden">
     <header id="hd">
       <div class="container d-flex jcb aic">
-        <h1><a href=""><img src="./img/logo.svg" alt=""></a></h1>
+        <h1><a href=""><img src="./img/svg/logo.svg" alt=""></a></h1>
         <ul class="d1ul d-flex me-auto px-3">
           <li class="d1li rel">
             <a href="" class="d1a">장례절차
@@ -89,43 +89,48 @@
         </ul>
       </div>
     </header>
-    <div class="swiper">
+    <div class="swiper overflow-visible container mt-5" id="mainSlider">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="./img/love.jpg" alt="Slide 1">
+          <img src="./img/main/thumbnail_1.jpg" alt="Slide 1">
         </div>
         <div class="swiper-slide">
-          <img src="./img/love.jpg" alt="Slide 2">
+          <img src="./img/main/thumbnail_2.jpg" alt="Slide 2">
         </div>
         <div class="swiper-slide">
-          <img src="./img/love.jpg" alt="Slide 3">
+          <img src="./img/main/thumbnail_3.jpg" alt="Slide 3">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/main/thumbnail_4.jpg" alt="Slide 4">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/main/thumbnail_5.jpg" alt="Slide 5">
         </div>
       </div>
-      <!-- 진행 상태 막대 -->
-      <div class="swiper-pagination"></div>
-  </div>
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.swiper', {
-      loop: true, /* 슬라이드 반복 */
-      slidesPerView: 1.3, /* 한 번에 1.3개 슬라이드 보이도록 */
-      centeredSlides: true, /* 활성 슬라이드 중앙 정렬 */
-      spaceBetween: 30, /* 슬라이드 간격 30px */
-      autoplay: {
-        delay: 3000, /* 3초마다 슬라이드 전환 */
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination', /* 페이징 요소 선택 */
-        clickable: true, /* 클릭 가능하게 설정 */
-        renderBullet: function (index, className) {
-          return `<span class="swiper-pagination-bar ${className}"></span>`; /* 막대형 페이징 생성 */
+      <div class="swiper-pagination mt-5 position-relative d-flex gap-0"></div>
+    </div>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+        loop: true, // 무한 루프
+        slidesPerView: 1.5, // 한 번에 보이는 슬라이드 (중앙 슬라이드와 양쪽 흐릿한 슬라이드 포함)
+        // centeredSlides: true, // 활성 슬라이드를 중앙에 배치
+        spaceBetween: 30, // 슬라이드 간격
+        // autoplay: {
+        //   delay: 3000, // 3초마다 자동으로 슬라이드 전환
+        //   disableOnInteraction: false,
+        // },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          renderBullet: function (index, className) {
+            return `<span class="swiper-pagination-bar ${className}"></span>`;
+          },
         },
-      },
-    });
-  </script>
+      });
+    </script>
 
     
     
