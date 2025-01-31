@@ -17,6 +17,52 @@
     font-weight: 800;
     font-style: normal;
 }
+@font-face {
+  font-family: 'Paperlogy-8ExtraBold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Paperlogy 1 Thin";
+  src: url(https://framerusercontent.com/assets/tFPNJd86ODE9UIxALwy5Pkw6P3c.woff2);
+  font-display: swap
+}
+@font-face {
+  font-family: "Paperlogy 2 ExtraLight";
+  src: url(https://framerusercontent.com/assets/dxn9KHLNoxlgo0hugrTBNRl5Ync.woff2);
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Paperlogy 3 Light";
+  src: url(https://framerusercontent.com/assets/hK9UzwOKw3tyH5qNqjdwNUaazGU.woff2);
+  font-display: swap
+}
+@font-face {
+  font-family: "Paperlogy 4 Regular";
+  src: url(https://framerusercontent.com/assets/lbMH2iYmyrPQ49LGEcV0RA2Vxxo.woff2);
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Paperlogy 5 Medium";
+  src: url(https://framerusercontent.com/assets/JI4C6xNQBdPMqMAJcoLSWHCgrg.woff2);
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Paperlogy 6 SemiBold";
+  src: url(https://framerusercontent.com/assets/5KEs6th84SArgCnoMfsblYRz2g.woff2);
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Paperlogy 7 Bold";
+  src: url(https://framerusercontent.com/assets/P5UwaHAZrdb3qbU8Fs6Qz3XIbo.woff2);
+  font-display: swap
+}
 .position-unset{
     position: unset !important;
 }
