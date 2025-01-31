@@ -9,7 +9,7 @@
 .basicfont {
   color: #6A6969;
   text-align: center;
-  font-family: "Paperlogy 1 Thin";
+  font-family: "Paperlogy 4 Regular";
   font-size: 1rem;
   font-style: normal;
   line-height: normal;
@@ -20,8 +20,8 @@
 }
 
 .descriptionfont {
-  color: rgba(0, 0, 0, 0.7);
-  font-family: Paperlogy;
+  color: rgba(0, 0, 0, 0.70);
+  font-family: "Paperlogy 4 Regular";
   text-align: right;
   font-size: 0.8125rem;
   font-style: normal;
@@ -51,4 +51,8 @@
 #sy_imagead .image-section .image-box img {
   width: 100%;
   border-radius: 1.43081rem;
+      gap: 20px;
+}
+#sy_imagead .image-box {
+    opacity: 1;
 }
