@@ -1,44 +1,54 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+.title.titlefont {
+  color: #000000;
+  font-family: "Paperlogy-7ExtraBold";
+  font-size: 2.5rem;
+  font-style: normal;
+  line-height: normal;
 }
-.container {
-    padding: 50px 20px;
+
+.basicfont {
+  color: #6A6969;
+  text-align: center;
+  font-family: "Paperlogy 1 Thin";
+  font-size: 1rem;
+  font-style: normal;
+  line-height: normal;
 }
-.title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
+
+.activefont {
+  color: var(--MainBrown, #754C43) !important;
 }
-.subtitle {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 40px;
+
+.descriptionfont {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Paperlogy;
+  text-align: right;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
-.image-section {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+
+#sy_imagead {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.image-box {
-    width: 20%;
-    margin: 10px;
-    text-align: center;
+#sy_imagead .titles {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
-.image-box img {
-    width: 100%;
-    border-radius: 10px;
+#sy_imagead .titles .description {
+  font-size: 16px;
+  text-align: right;
 }
-.image-box p {
-    font-size: 14px;
-    color: #777;
-    margin-top: 10px;
+#sy_imagead .image-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
 }
-.description {
-    margin-top: 30px;
-    font-size: 14px;
-    color: #666;
-    line-height: 1.6;
+#sy_imagead .image-section .image-box img {
+  width: 100%;
+  border-radius: 1.43081rem;
 }
