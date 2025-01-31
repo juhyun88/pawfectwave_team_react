@@ -277,11 +277,19 @@ justify-content: flex-start;
   justify-content: center;
 }
 
+.square-box.text-box {
+  text-align: left; /* 텍스트를 오른쪽 정렬 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 오른쪽 정렬 유지 */
+  justify-content: center;
+}
+
 h1 {
   font-size: 1.125rem; /* 가장 큰 크기 */
   font-weight: 400;
   color: #006838;
-  font-family: 'Paperlogy';
+  font-family: "Paperlogy 4 Regular";
   font-style: normal;
   line-height: normal;
   margin-bottom: 40px;
@@ -289,7 +297,7 @@ h1 {
 
 h2 {
   color: #1E1E1E;
-  font-family: 'Paperlogy';
+  font-family: "Paperlogy 4 Regular";
   font-size: 1.875rem;
   font-style: normal;
   font-weight: 400;
@@ -299,7 +307,7 @@ h2 {
 
 p {
   color: rgba(30, 30, 30, 0.70);
-  font-family: 'Paperlogy';
+  font-family: "Paperlogy 3 Light";
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 300;
@@ -326,4 +334,68 @@ button {
   line-height: normal;
   border: 1px solid #1E1E1E;
   background-color: #FFF;
+}
+@media only screen and (min-width: 768px) {
+  .rolling-partners {
+      margin-bottom: 100px;
+  }
+}
+.rolling-partners {
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom: 45px;
+}
+.rolling-partners .rolling-wrap {
+  display: flex;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .rolling-partners .rolling-wrap .js-rolling {
+      padding: 16px 0 30px;
+  }
+}
+.rolling-wrap .js-rolling.original {
+  animation: rollingleft1 32.5s linear infinite normal none running;
+}
+
+
+.rolling-partners .rolling-wrap .js-rolling {
+  display: flex; 
+  padding: 0 0 30px; 
+  align-items: center; 
+  position: relative;
+}
+.rolling-partners .rolling-wrap .js-rolling img {
+  height: 55px; 
+  width: auto; 
+  margin: 0 27px;
+}
+.rolling-partners .rolling-wrap .js-rolling img:nth-last-of-type(5) {
+  height: 56px; 
+  margin: 0 24px;
+}
+.rolling-partners .rolling-wrap .js-rolling img:nth-last-of-type(3) {
+  height: 63px; 
+  margin: -8px 27px 0;
+}
+.rolling-partners .rolling-wrap .js-rolling img:nth-last-of-type(2) {
+  margin: 4px 25px 0;
+}
+.rolling-partners .rolling-wrap .js-rolling img:nth-last-of-type(1) {
+  height: 58px; 
+  margin: 0 22px;
+}
+.rolling-wrap .js-rolling.original {
+  animation: rollingleft1 32.5s linear infinite normal none running;
+}
+.rolling-wrap .js-rolling.clone {
+  animation: rollingleft2 32.5s linear infinite;
+}
+@keyframes rollingleft1 {
+    0% { transform: translateX(0); } 50% { transform: translateX(-100%); } 50.01% { transform: translateX(100%); } 100% { transform: translateX(0); }
+}
+
+@keyframes rollingleft2 {
+    0% { transition: translateX(0%); } 100% { transform: translateX(-200%); }
 }
