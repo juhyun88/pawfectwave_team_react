@@ -1,8 +1,4 @@
-.container{
-  max-width: 1280px;
-  max-height: 6146px;
-  background-color: white;
-}
+
 :root{
     --MainBrownLight : #A97D5E;
     --Primery : #006838;
@@ -10,6 +6,15 @@
 
 .main-primery{
     color: var(--Primery);
+}
+.container{
+  max-width: 1280px;
+  max-height: 6146px;
+  background-color: white;
+}
+.inner{
+  width:1280px;
+  margin: 0 auto;
 }
 @font-face {
     font-family: 'Paperlogy-8ExtraBold';
