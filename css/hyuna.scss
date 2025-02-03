@@ -1,0 +1,38 @@
+#ft{
+  background-color: #E8E3E3;
+  font-family: "Noto Sans KR";
+  .container{
+    background-color: transparent;
+    .info_box {
+      border-bottom: 1px solid #000;
+      p {
+        font-weight: 400;
+        line-height: 1.5;
+      }
+    }
+    h2{
+      color: #000;
+      font-size: 44px;
+      font-weight: 700;
+      margin-bottom: 1.4rem;
+    }
+    p{
+      font-size: 19px;
+    }
+    p.call {
+      color: #006838;
+      font-weight: 500;
+      margin-bottom: 1.4rem;
+    }
+    .info {
+      margin-bottom: 1.38rem;
+    }
+    .social_icons {
+      gap: 11px;
+    }
+    .footer_copy {
+      gap: 135px;
+      margin-top: 1.38rem;
+    }
+  }
+}

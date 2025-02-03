@@ -295,7 +295,7 @@ h1 {
   margin-bottom: 40px;
 }
 
-h2 {
+/* h2 {
   color: #1E1E1E;
   font-family: "Paperlogy 4 Regular";
   font-size: 1.875rem;
@@ -303,9 +303,9 @@ h2 {
   font-weight: 400;
   line-height: normal;
   margin-bottom: 56px;
-}
+} */
 
-p {
+/* p {
   color: rgba(30, 30, 30, 0.70);
   font-family: "Paperlogy 3 Light";
   font-size: 1.125rem;
@@ -314,7 +314,7 @@ p {
   line-height: normal;
   margin-top: 3.93px;
   margin-bottom: 63px;
-}
+} */
 
 .text-box p + p { 
   margin-top: 1px; /* 두 번째 p 태그와의 간격 */
