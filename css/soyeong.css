@@ -49,5 +49,13 @@
 }
 #sy_imagead .image-section .image-box img {
   width: 100%;
-  border-radius: 1.43081rem;
+  border-radius: 1.45rem;
+}
+#sy_imagead .image-section .image-box .hover-text {
+  bottom: 70px;
+  font-size: 1.8rem;
+  letter-spacing: -0.08em;
+  font-family: "Paperlogy 5 Medium";
+  opacity: 0;
+  transition: 0.5s;
 }

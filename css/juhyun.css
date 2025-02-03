@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-.d1a {
+#hd .d1a {
   text-decoration: none;
   font-size: 15px;
   padding: 0 25px;
@@ -7,11 +6,11 @@
   color: black;
 }
 
-.d1li:hover .d2ul {
+#hd .d1li:hover .d2ul {
   display: block;
 }
 
-.d2ul {
+#hd .d2ul {
   background-color: #006838;
   left: 14%;
   display: none;
@@ -24,7 +23,7 @@
   box-sizing: border-box;
   text-align: center;
 }
-.d2ul .d2li {
+#hd .d2ul #hd .d2li {
   display: flex;
   padding: 5px 10px;
   font-size: 12px;
@@ -153,65 +152,3 @@ button {
     transform: translateX(-200%);
   }
 }
-=======
-h1 {
-    font-size: 1.125rem; /* 가장 큰 크기 */
-    font-weight: 400;
-    color: #006838;
-    font-family: "Paperlogy 4 Regular";
-    font-style: normal;
-    line-height: normal;
-    margin-bottom: 40px;
-  }
-  
-  h2 {
-    color: #1E1E1E;
-    font-family: "Paperlogy 4 Regular";
-    font-size: 1.875rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-bottom: 56px;
-  }
-  
-  p {
-    color: rgba(30, 30, 30, 0.70);
-    font-family: "Paperlogy 3 Light";
-    font-size: 1.125rem;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    margin-top: 3.93px;
-    margin-bottom: 63px;
-  }
-  
-  .text-box p + p { 
-    margin-top: 1px; /* 두 번째 p 태그와의 간격 */
-  }
-  
-  button {
-    font-family: "Noto Sans KR";
-    width: 16.5rem;
-    height: 4.1875rem;
-    padding: 1.44px 4.06px 1.38px 3.31px;
-    color: #1E1E1E;
-    border: 1px solid #1E1E1E;
-    font-size: 1.875rem;
-    cursor: pointer;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    border: 1px solid #1E1E1E;
-    background-color: #FFF;
-  }
-  .btn_petros:hover{
-    background-color: #93ab9d;
-    color: white;
-    border: none;
-  }
-  .btn_pfw:hover{
-    background-color: #93ab9d;
-    color: white;
-    border: none;
-  }
->>>>>>> juhyun
