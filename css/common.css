@@ -61,12 +61,10 @@
   color: var(--Primery);
 }
 .container{
-max-width: 1280px; 
+  max-width: 1280px; 
+  margin: 0 auto;
 }
-.inner{
-width:1280px;
-margin: 0 auto;
-}
+
 
 .position-unset{
     position: unset !important;
@@ -97,5 +95,21 @@ justify-content: flex-start;
 }
 .jce{
     justify-content: flex-end;
+}
+
+
+.basicfont{
+  color: #6A6969; 
+  font-family: "Paperlogy 3 Light";
+  font-style: normal;  
+  line-height: normal;
+}
+.activefont{
+  color: var(--MainBrown, #754C43) !important;
+}
+
+.sectionContent{
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
