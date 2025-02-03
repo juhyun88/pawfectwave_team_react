@@ -1,9 +1,24 @@
-#hd .d1a {
+.d1ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.d1li {
+  padding: 10px 15px;
+  position: relative;
+}
+
+#hd .d1li .d1a {
   text-decoration: none;
-  font-size: 15px;
-  padding: 0 25px;
+  font-size: 19px;
+  padding: 0 22.37px;
   line-height: 100px;
   color: black;
+  font-weight: 400;
+  font-family: "Noto Sans KR";
+  display: flex;
+  align-items: center;
 }
 
 #hd .d1li:hover .d2ul {
@@ -11,25 +26,28 @@
 }
 
 #hd .d2ul {
-  background-color: #006838;
-  left: 14%;
   display: none;
-  top: 75%;
-  margin: 0;
+  background-color: #93ab9d;
+  width: -moz-max-content;
+  width: max-content;
+  white-space: nowrap;
   padding: 0;
-  list-style: none;
-  border: 1px solid #ccc;
-  width: auto;
-  box-sizing: border-box;
-  text-align: center;
+  margin: 0;
+  top: 80%;
+  left: 0;
 }
-#hd .d2ul #hd .d2li {
-  display: flex;
+
+#hd .d2li {
   padding: 5px 10px;
-  font-size: 12px;
-  justify-content: center;
-  align-items: center;
-  color: white;
+  text-align: center;
+  font-size: 10px;
+}
+
+.here {
+  margin-top: 10px;
+  margin-right: 22.37px;
+  width: 26.013px;
+  height: 26.013px;
 }
 
 .reservation-button {
@@ -50,7 +68,7 @@
 }
 
 .swiper-container {
-  width: 80%;
+  width: 100%;
   height: 30rem;
   margin: 0 auto;
   overflow: hidden;
