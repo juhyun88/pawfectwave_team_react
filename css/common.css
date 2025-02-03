@@ -70,32 +70,6 @@
     position: unset !important;
 }
 
-.d-flex{
-    display: flex;
-}
-
-.jcc{
-    justify-content: center;
-}
-
-.aic{
-    align-items: center;
-}
-.aie{
-  align-items: end;
-}
-.jcb{
-    justify-content: space-between;
-}
-.me-auto {
-    margin-left: 0;
-}
-.jcs{
-justify-content: flex-start;
-}
-.jce{
-    justify-content: flex-end;
-}
 .basicfont{
   color: #6A6969; 
   font-family: "Paperlogy 3 Light";

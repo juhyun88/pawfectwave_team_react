@@ -27,11 +27,6 @@
     <link rel="preconnect" href="https://fastly.jsdelivr.net/gh/projectnoonnu/2412-1@1.0/Ownglyph_corncorn-Rg.woff2">
     <link rel="preconnect" href="https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2">
 
-
-
-
- 
-
     <!-- 리셋 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -41,15 +36,14 @@
     <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
  
 
-    <!-- 플러그인 -->
-    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>   
-
 
     <link rel="stylesheet" href="./css/common.css">
 
     <!-- 커스텀 -->
     <link rel="stylesheet" href="./css/eunhye.css">
-    <link rel="stylesheet" href="./css/soyeong.css">
+    <link rel="stylesheet" href="./css/soyeong.min.css">
+    <link rel="stylesheet" href="./css/hyuna.min.css">
+    <link rel="stylesheet" href="./css/juhyun.min.css">
   
   
   
@@ -109,6 +103,8 @@
         </ul>
       </div>
     </header>
+
+    
     <div class="swiper overflow-visible container mt-5" id="mainSlider">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -136,33 +132,7 @@
 
 
  <!-- eunhye  -->
- <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>사랑 인사 추억</title>
-  <style>
-    .container {
-      display: flex; 
-      width: 80%;
-      max-width: 1200px;
-      margin: 0 auto;
-      gap: 20px; 
-    }
-
-    .left, .right {
-      flex: 1;
-      background-color: white;
-      padding: 20px;
-      border-radius: 8px;
-    }
-
-   
-  </style>
-</head>
-
-<body>
-
-
-  <div class="quick_Menu">
+  <div class="quick_Menu" id="eh_quick">
      <a href="">
           <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M15.3266 20.7511C14.5652 20.7511 13.7061 20.5334 12.7639 20.0966C8.2953 17.8027 4.35529 14.4667 1.36033 10.4442L1.34888 10.4275C-0.201071 7.95514 0.385708 6.11194 0.976304 5.41257L2.04729 4.14606C2.26626 3.88684 2.57301 3.72882 2.91124 3.70066C3.249 3.67249 3.57769 3.77752 3.83673 3.99711L6.34271 6.11911C6.72483 6.44277 7.07594 6.94785 6.40186 8.85979C6.26065 9.26032 6.31742 9.6704 6.55357 9.95778C8.18748 11.9442 10.1458 13.6022 12.3746 14.8859C12.6966 15.0716 13.1107 15.0592 13.4814 14.8534C15.2536 13.8719 15.8099 14.1345 16.1925 14.4581L18.6985 16.5801C19.2328 17.0327 19.3 17.8361 18.8483 18.3713L17.7773 19.6383C17.1504 20.3796 16.3218 20.752 15.3266 20.752V20.7511ZM1.77156 10.1502C4.71976 14.1072 8.59727 17.3893 12.9857 19.6421C14.9502 20.5529 16.4353 20.4427 17.3923 19.3103L18.4633 18.0438C18.7357 17.7215 18.6956 17.237 18.3731 16.9644L15.8671 14.8424C15.6844 14.6877 15.3438 14.3989 13.7266 15.2945C13.199 15.5867 12.6003 15.5972 12.1237 15.3227C9.84239 14.0084 7.8378 12.3108 6.16476 10.2776C5.81556 9.85276 5.72635 9.25936 5.92671 8.69079C6.54116 6.9469 6.20054 6.65855 6.01783 6.5034L3.51186 4.38141C3.35538 4.24917 3.15597 4.18711 2.9537 4.20287C2.75 4.22005 2.5649 4.31505 2.43323 4.47116L1.36224 5.73767C0.894727 6.29049 0.379506 7.92363 1.77156 10.1492V10.1502Z" fill="white"/>
@@ -180,11 +150,14 @@
 
 
  
-  <div class="ehcontainer" id="ehwave_love">
-    <div class="container2">
+  <div class="ehcontainer flex-column" id="ehwave_love">
+    <!-- 첫번째 -->
+    <div class="love_list d-md-flex justify-content-between align-items-center " >
       <div class="left">
-        <div class="image-container">
+        <div class="image-container position-relative ">
           <img src="./img/main_ci/love_1.png" alt="eunhye_love">
+
+          <span class="position-absolute text-white w-100 top-0 h-100 start-0 d-flex justify-content-center align-items-center d-md-none">사랑</span>
 
           <div class="lottie-container">
             <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.3.0/dist/dotlottie-wc.js" type="module"></script>
@@ -193,7 +166,7 @@
         </div>
       </div>
       
-      <div class="right">
+      <div class="right d-none d-md-block">
         <span class="love-text">
           <p>
             <span class="highlight">사랑</span>은 가족의 일원으로서 사랑과  
@@ -205,16 +178,8 @@
         </span>
       </div>
     </div>
-  </div>
-
-
- 
-
-
-
-  
-   <div class="ehcontainer_hello" id="ehwave_hello">
-    <div class="container_hello">
+    <!-- 두번째 -->
+    <div class="love_list  d-flex flex-row-reverse justify-content-between  align-items-center ">
       <div class="left">
         <div class="image-container">
           <img src="./img/main_ci/Hello_2.png" alt="eunhye_hello">
@@ -224,15 +189,12 @@
             <dotlottie-wc src="https://lottie.host/3b0c53d9-de38-4137-93d7-6d0a248d2b43/kEG79mLDll.lottie" autoplay loop></dotlottie-wc>
           </div>
         </div>
-      </div>
-
-      <div class="hand-container">
-        <img src="./img/hand_hello.svg" alt="eunhye_hello_hand" class="hand-animation">
-      </div>
-
+      </div>      
+      <div class="right position-relative">
+        <div class="hand-container">
+          <img src="./img/hand_hello.svg" alt="eunhye_hello_hand" class="hand-animation">
+        </div>
   
-      
-      <div class="right">
         <span class="love-text">
           <p>
             <span class="highlight">인사</span>는 마지막 여행을 떠나는 반려동물에게 
@@ -242,12 +204,8 @@
         </span>
       </div>
     </div>
-  </div>
-
-  
-
-  <div class="ehcontainer" id="ehwave_Memories">
-    <div class="container_Memories">
+    <!-- 세번째 -->
+    <div class="love_list  d-flex justify-content-between  align-items-center ">
       <div class="left">
         <div class="image-container">
           <img src="./img/main_ci/Memories_3.png" alt="eunhye_Memories">
@@ -271,12 +229,8 @@
         </span>
       </div>
     </div>
-  </div>
 
-
-
-
-  
+  </div>  
 
   <div class="banner-container">
     <div class="ehcontent" id="ehwave_banner1">
@@ -304,9 +258,9 @@
     </div>
   </div>
 
-<!-- //eunhye -->
+  <!-- //eunhye -->
 
-  <!-- soyeong -->
+
 
   <!-- soyeong -->
   <div class="bannerlist container sectionContent px-5 px-md-0 d-flex flex-column" id="sy_imagead">
@@ -347,10 +301,9 @@
             <p class="basicfont  mt-4  text-center">장례 이후 힘드신 보호자분들을 위해<br><span class="activefont">펫로스 상담 서비스</span>가 준비되어있습니다.</p>
           </li>
         </ul>
-</div>
-
-<!-- //soyeong -->
+  </div>
   <!-- //soyeong -->
+
     
 
   <!-- juhyun -->
