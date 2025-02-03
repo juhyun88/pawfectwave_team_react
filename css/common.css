@@ -1,20 +1,4 @@
 
-:root{
-    --MainBrownLight : #A97D5E;
-    --Primery : #006838;
-}
-
-.main-primery{
-    color: var(--Primery);
-}
-.container{
-  max-width: 1280px;
-  background-color: white;
-}
-.inner{
-  width:1280px;
-  margin: 0 auto;
-}
 @font-face {
     font-family: 'Paperlogy-8ExtraBold';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
@@ -67,10 +51,24 @@
   src: url(https://framerusercontent.com/assets/P5UwaHAZrdb3qbU8Fs6Qz3XIbo.woff2);
   font-display: swap
 }
+
+:root{
+  --MainBrownLight : #A97D5E;
+  --Primery : #006838;
+}
+
+.main-primery{
+  color: var(--Primery);
+}
+.container{
+  max-width: 1280px; 
+  margin: 0 auto;
+}
+
+
 .position-unset{
     position: unset !important;
 }
-
 
 .d-flex{
     display: flex;
@@ -98,3 +96,18 @@ justify-content: flex-start;
 .jce{
     justify-content: flex-end;
 }
+.basicfont{
+  color: #6A6969; 
+  font-family: "Paperlogy 3 Light";
+  font-style: normal;  
+  line-height: normal;
+}
+.activefont{
+  color: var(--MainBrown, #754C43) !important;
+}
+
+.sectionContent{
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
