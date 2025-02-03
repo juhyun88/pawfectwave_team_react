@@ -1,21 +1,4 @@
 
-:root{
-    --MainBrownLight : #A97D5E;
-    --Primery : #006838;
-}
-
-.main-primery{
-    color: var(--Primery);
-}
-.container{
-  max-width: 1280px;
-  max-height: 6146px;
-  background-color: white;
-}
-.inner{
-  width:1280px;
-  margin: 0 auto;
-}
 @font-face {
     font-family: 'Paperlogy-8ExtraBold';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
@@ -68,13 +51,27 @@
   src: url(https://framerusercontent.com/assets/P5UwaHAZrdb3qbU8Fs6Qz3XIbo.woff2);
   font-display: swap
 }
+
+:root{
+  --MainBrownLight : #A97D5E;
+  --Primery : #006838;
+}
+
+.main-primery{
+  color: var(--Primery);
+}
+.container{
+max-width: 1280px; 
+}
+.inner{
+width:1280px;
+margin: 0 auto;
+}
+
 .position-unset{
     position: unset !important;
 }
 
-#hd{
-    width: 1200xp;
-}
 .d-flex{
     display: flex;
 }
@@ -101,229 +98,4 @@ justify-content: flex-start;
 .jce{
     justify-content: flex-end;
 }
-.d1a{
-    text-decoration: none;
-}
-.d2ul{
-    background-color: #006838;
-    left: 14%;
-    display: none;
-    top:75%;
-    margin-top: 0; 
-    padding: 0;
-    list-style: none;
-    border: 1px solid #ccc;
-    width: auto;
-    box-sizing: border-box;
-    text-align: center;
-}
-   
-.d1li:hover .d2ul{
-    display: block;
-    
-}
-.d1a{
-    font-size: 15px;
-    padding: 0 25px;
-    line-height: 100px;
-}
-.rel{
-    position: relative;
-}
-.abs{
-    position: absolute;
-}
-.d2li{
-    display: flex;
-    padding: 5px 10px;
-    font-size: 12px;
-    line-height:normal;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-.reservation-button{
-    background-color: #006838; 
-    color: white; 
-    border: none; 
-    border-radius: 30px; 
-    width: 10rem; 
-    height: 3rem; 
-    font-size: 1rem; 
-    font-weight: bold; 
-    cursor: pointer; 
-    transition: background-color 0.3s, transform 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap:5px;
-}
-.here{
-    margin: 7px 10px 0 10px;
-}
-.swiper-container {
-    width: 80%; /* 슬라이더 전체 폭 */
-    height: 30rem; /* 슬라이더 높이 */
-    margin: 0 auto; /* 가운데 정렬 */
-    overflow: hidden; /* 슬라이드 밖의 요소 숨김 */
-    position: relative;
-  }
-  
-  /* 슬라이더 개별 슬라이드 */
-  .swiper-slide {   
-    border-radius: 10px;
-    overflow: hidden; 
-    height: auto !important;
 
-  }
-  
-  .swiper-slide img {
-    display: block;
-    height: 100%;
-    width:100%;    
-    object-fit: cover;
-    transform: scale(1);
-    opacity: 0.5;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    
-  }
-  
-  /* 중앙 슬라이드 (활성화된 슬라이드) */
-  .swiper-slide-active img{
-    transform: scale(1.2); /* 원래 크기 */
-    opacity: 1; /* 완전한 불투명도 */
-  }
-  
- 
-  
-  /* 페이징 컨트롤러 */
-  .swiper-pagination {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  /* 막대형 페이징 */
-  .swiper-pagination-bar {
-    width: 30px;
-    height: 6px;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .swiper-pagination-bar-active {
-    background-color: #007bff;
-  }
-#mainSlider  .swiper-pagination-bullet{
-    width:120px;
-    border-radius: 0;
-    height:3px;
-    margin:0;
-    position: unset;
-
-  }
-  #mainSlider .swiper-pagination-bullet:after{
-    content: "";
-    display: block;
-    position: absolute;
-    width:0;
-    left:0; height:3px;
-    background-color: #007bff;
-    transition: 0.5s;
-
-  }
-  #mainSlider .swiper-pagination-bullet-active{
-    position: relative;
-  }
-  #mainSlider .swiper-pagination-bullet-active:after{
-    width:100%;
-  }
-  .square-box {
-    width: 100%;  
-    aspect-ratio: 1 / 1; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-radius: 10px; 
-}
-  .square-box img {
-    width: 39.3125rem;  
-    height: 29.6875rem; 
-    object-fit: cover;
-    border-radius: 1.25rem 1.25rem 6.25rem 1.25rem;
-
-}
-  .pet_wave .square-box img {
-    width: 39.3125rem;  
-    height: 29.6875rem; 
-    object-fit: cover;
-    border-radius: 1.25rem 1.25rem 1.25rem 6.25rem;
-
-}
-.text-box {
-  text-align: right; /* 텍스트를 오른쪽 정렬 */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; /* 오른쪽 정렬 유지 */
-  justify-content: center;
-}
-
-h1 {
-  font-size: 1.125rem; /* 가장 큰 크기 */
-  font-weight: 400;
-  color: #006838;
-  font-family: 'Paperlogy';
-  font-style: normal;
-  line-height: normal;
-  margin-bottom: 40px;
-}
-
-h2 {
-  color: #1E1E1E;
-  font-family: 'Paperlogy';
-  font-size: 1.875rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin-bottom: 56px;
-}
-
-p {
-  color: rgba(30, 30, 30, 0.70);
-  font-family: 'Paperlogy';
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  margin-top: 3.93px;
-  margin-bottom: 63px;
-}
-
-.text-box p + p { 
-  margin-top: 1px; /* 두 번째 p 태그와의 간격 */
-}
-
-button {
-  font-family: "Noto Sans KR";
-  width: 16.5rem;
-  height: 4.1875rem;
-  padding: 1.44px 4.06px 1.38px 3.31px;
-  color: #1E1E1E;
-  border: 1px solid #1E1E1E;
-  font-size: 1.875rem;
-  cursor: pointer;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  border: 1px solid #1E1E1E;
-  background-color: #FFF;
-}
