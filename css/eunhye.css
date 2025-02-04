@@ -1,23 +1,6 @@
 
-@font-face {
-  font-family: "Paperlogy 4 Regular";
-  src: url(https://framerusercontent.com/assets/lbMH2iYmyrPQ49LGEcV0RA2Vxxo.woff2);
-  font-display: swap
-}
 
-
-
-
-
-#ehwave_love .left, 
-#ehwave_love .right {
-  flex: 1;
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-#eh_quick.quick_Menu{
+.quick_Menu{
   position: fixed;
   bottom:50px;
   right:50px;
@@ -26,7 +9,7 @@
   gap: 15px;
 
 }
-#eh_quick.quick_Menu a{
+.quick_Menu a{
   background-color: #006838;
   width:40px;
   height:40px;
@@ -356,7 +339,7 @@ dotlottie-wc {
 .Memories-container dotlottie-wc {
   width: 100% !important; 
   height: 100% !important;
-  transform: scale(1.8); /
+  transform: scale(1.8); 
   transform-origin: center center; 
 }
 
@@ -390,8 +373,8 @@ dotlottie-wc {
 /* 전체 배너 컨테이너 */
 .banner-container {
   display: flex;
-  flex-direction: column; /
-  align-items: center; /
+  flex-direction: column; 
+  align-items: center; 
   gap: 140px; 
 }
 
@@ -412,11 +395,6 @@ dotlottie-wc {
 }
 
 
-@font-face {
-  font-family: "Paperlogy 3 Light";
-  src: url(https://framerusercontent.com/assets/hK9UzwOKw3tyH5qNqjdwNUaazGU.woff2);
-  font-display: swap
-}
 
 /* 전체 이미지와 텍스트 컨테이너 설정 */
 .ehcontent, .ehcontent1 {
