@@ -56,6 +56,9 @@
   --MainBrownLight : #A97D5E;
   --Primery : #006838;
 }
+body{
+  font-family: "Paperlogy 3 Light";
+}
 
 .main-primery{
   color: var(--Primery);
@@ -66,13 +69,22 @@
 }
 
 
+.r3font{
+  font-family: "Paperlogy 3 Light" !important;
+}
+.r4font{
+  font-family: "Paperlogy 4 Regular" !important;
+}
+
+
+
 .position-unset{
     position: unset !important;
 }
 
 .basicfont{
   color: #6A6969; 
-  font-family: "Paperlogy 3 Light";
+  
   font-style: normal;  
   line-height: normal;
 }

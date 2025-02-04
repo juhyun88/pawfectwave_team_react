@@ -1,3 +1,16 @@
+@mixin generate-opacity($start, $end, $step) {
+    @for $i from $start through $end {
+      $value: $i * $step + $start;
+      .opacity-#{$value * 10} {
+        opacity: $value !important;
+      }
+    }
+  }
+
+@include generate-opacity(0, 10, 0.1);
+
+  
+
 .title{
 
     &.titlefont{
@@ -72,3 +85,10 @@
         }
     }
 }
+
+#ehwave_banner1{
+    p{
+        color:#000000 !important;
+    }
+}
+
