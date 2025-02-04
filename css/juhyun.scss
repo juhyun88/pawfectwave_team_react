@@ -68,7 +68,6 @@ $border-radius: 10px;
     height: 3rem;
     font-size: 1rem;
     font-weight: bold;
-    cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
     display: flex;
     align-items: center;
@@ -76,13 +75,15 @@ $border-radius: 10px;
     gap: 5px;
   }
 
+//메인슬라이드
   .swiper-container {
     width: 100%;
-    height: 600px;
+    height: v100;
     margin: 0 auto;
     overflow: visible;
     position: relative;
-
+    // margin-bottom: 100px;
+  
     .swiper-wrapper {
       display: flex;
       align-items: center;
@@ -90,50 +91,66 @@ $border-radius: 10px;
   
     .swiper-slide {
       flex-shrink: 0;
-      width: 1280px; // 슬라이드가 한 화면에 80%만 차지하게 함
-      height: 600px;
-      border-radius: $border-radius;
+      width: 1280px; // 메인 슬라이드 크기 고정
+      height: 600px; // 슬라이드 높이 변경
+      display: flex;
+      justify-content: center;
+      align-items: center;
       overflow: hidden;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      border-radius: 20px;
   
       img {
-        display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
         opacity: 0.5;
+        border-radius: 20px;
         transition: transform 0.5s ease, opacity 0.5s ease;
       }
-      .swiper-slide-prev,
-      .swiper-slide-next {
-        height: 600px; // 양옆 슬라이드도 동일한 높이 적용
-        transform: scale(0.9); // 크기 줄이기
-  }
     }
   
-    .swiper-slide-active img {
+    /* 메인 슬라이드 */
+    .swiper-slide-active {
       transform: scale(1);
       opacity: 1;
+  
+      img {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  
+    /* 양 옆 슬라이드 */
+    .swiper-slide-prev,
+    .swiper-slide-next {
+      // width: 1200px; // 중앙과 크기 조정
+      // height: 670px; // 높이 동일하게 맞춤
+      transform: scale(0.9); // 크기 줄이기
+      opacity: 0.7;
     }
   }
-
+  
+  /* 하단 막대 바 (페이지네이션) */
   .swiper-pagination {
     position: absolute;
     bottom: 20px;
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 10px; // 간격 조정
   
-    .swiper-pagination-bar {
-      width: 30px;
-      height: 6px;
+    .swiper-pagination-bullet {
+      width: 50px;
+      height: 8px;
       background-color: #e0e0e0;
       border-radius: 5px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
   
-      &-active {
-        background-color: $highlight-color;
-      }
+    .swiper-pagination-bullet-active {
+      background-color: #008000; // 활성화된 막대 색상
     }
   }
 
@@ -173,6 +190,11 @@ $border-radius: 10px;
     cursor: pointer;
     background-color: #FFF;
   }
+  .btn_petros:hover{
+    background-color: #93ab9d;
+    border: none; 
+    color: white;
+  }
   .petros_box {
     display: flex;
     justify-content: center;
@@ -210,295 +232,220 @@ $border-radius: 10px;
   }
   
   //하단 업체 슬라이드
-  .partner_list {
-    padding: 60px 0;
-  
-    .partner_marquee {
-      width: 100%;
-      height: 220px;
+.partner_list {
+  padding: 60px 0;
+
+  .partner_marquee {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    margin: 30px 0;
+
+    div {
+      display: flex;
+      height: 100%;
+      position: absolute;
       overflow: hidden;
+    }
+
+    &#partner_marquee1 div {
+      width: 7560px;
+      animation: partner_marquee1 45s linear infinite;
+      left: 0;
+    }
+
+    &#partner_marquee2 div {
+      width: 7560px;
+      animation: partner_marquee2 45s linear infinite;
+      right: 0;
+    }
+
+    span {
+      height: 100%;
+      width: 270px;
+      height: 220px;
       position: relative;
-      margin: 30px 0;
-  
+      display: block;
+    }
+
+    &#partner_marquee1 {
       div {
-        display: flex;
-        height: 100%;
-        position: absolute;
-        overflow: hidden;
-      }
-  
-      &#partner_marquee1 div {
-        width: 7560px;
-        animation: partner_marquee1 45s linear infinite;
-        left: 0;
-      }
-  
-      &#partner_marquee2 div {
-        width: 7560px;
-        animation: partner_marquee2 45s linear infinite;
-        right: 0;
-      }
-  
-      span {
-        height: 100%;
-        width: 270px;
-        height: 220px;
-        position: relative;
-        display: block;
-      }
-  
-      &#partner_marquee1 {
-        div {
-          
-          span:nth-of-type(14n - 13) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_01.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 12) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_02.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 11) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_03.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 10) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_04.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 9) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_05.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 8) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_06.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 7) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_07.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 6) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_08.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 5) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_09.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 4) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_10.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 3) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_11.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 2) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_12.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 1) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_13.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_14.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
+        
+        span:nth-of-type(14n - 13) {
+          background: url("http://da-bong.com/dabong/2024/img/partner/logo_01.png") no-repeat 50% 50%;
+          background-size: auto 100%;
         }
-      }
-  
-      &#partner_marquee2 {
-        div {
-          span:nth-of-type(14n - 13) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_15.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 12) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_16.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 11) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_17.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 10) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_18.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 9) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_19.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 8) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_20.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 7) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_21.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 6) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_22.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 5) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_23.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 4) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_24.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 3) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_25.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 2) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_26.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n - 1) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_27.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
-  
-          span:nth-of-type(14n) {
-            background: url("http://www.da-bong.com/dabong/2024/img/partner/logo_28.png") no-repeat 50% 50%;
-            background-size: auto 100%;
-          }
+
+        span:nth-of-type(14n - 12) {
+          background: url("http://da-bong.com/dabong/2024/img/partner/logo_02.png") no-repeat 50% 50%;
+          background-size: auto 100%;
+        }
+
+        span:nth-of-type(14n - 11) {
+          background: url("http://da-bong.com/dabong/2024/img/partner/logo_03.png") no-repeat 50% 50%;
+          background-size: auto 100%;
+        }
+
+        span:nth-of-type(14n - 10) {
+          background: url("http://da-bong.com/dabong/2024/img/partner/logo_04.png") no-repeat 50% 50%;
+          background-size: auto 100%;
+        }
+
+        span:nth-of-type(14n - 9) {
+          background: url("http://da-bong.com/dabong/2024/img/partner/logo_05.png") no-repeat 50% 50%;
+          background-size: auto 100%;
+        }
+
+        span:nth-of-type(14n - 8) {
+          background: url("http://da-bong.com/dabong/2024/img/partner/logo_06.png") no-repeat 50% 50%;
+          background-size: auto 100%;
+        }
+
+        span:nth-of-type(14n - 7) {
+          background: url("http://da-bong.com/dabong/2024/img/partner/logo_07.png") no-repeat 50% 50%;
+          background-size: auto 100%;
+        }
+
+        span:nth-of-type(14n - 6) {
+          background: url("http://da-bong.com/dabong/2024/img/partner/logo_08.png") no-repeat 50% 50%;
+          background-size: auto 100%;
+        }
+
+        span:nth-of-type(14n - 5) {
+          background: url("http://da-bong.com/dabong/2024/img/partner/logo_09.png") no-repeat 50% 50%;
+          background-size: auto 100%;
+        }
+
+        span:nth-of-type(14n - 4) {
+          background: url("http://da-bong.com/dabong/2024/img/partner/logo_10.png") no-repeat 50% 50%;
+          background-size: auto 100%;
+        }
+
+        span:nth-of-type(14n - 3) {
+          background: url("http://da-bong.com/dabong/2024/img/partner/logo_11.png") no-repeat 50% 50%;
+          background-size: auto 100%;
+        }
+
+        span:nth-of-type(14n - 2) {
+          background: url("http://da-bong.com/dabong/2024/img/partner/logo_12.png") no-repeat 50% 50%;
+          background-size: auto 100%;
+        }
+
+        span:nth-of-type(14n - 1) {
+          background: url("http://da-bong.com/dabong/2024/img/partner/logo_13.png") no-repeat 50% 50%;
+          background-size: auto 100%;
+        }
+
+        span:nth-of-type(14n) {
+          background: url("http://da-bong.com/dabong/2024/img/partner/logo_14.png") no-repeat 50% 50%;
+          background-size: auto 100%;
         }
       }
     }
-  
+  }
+
+  @keyframes partner_marquee1 {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -3780px;
+    }
+  }
+
+  @keyframes partner_marquee2 {
+    0% {
+      right: 0;
+    }
+    100% {
+      right: -3780px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 0 0 10vw;
+
+    .partner_marquee {
+      height: 176px;
+
+      #partner_marquee1 div {
+        width: 6048px;
+        animation: partner_marquee1 45s linear infinite;
+        left: 0;
+      }
+
+      #partner_marquee2 div {
+        width: 6048px;
+        animation: partner_marquee2 45s linear infinite;
+        right: 0;
+      }
+
+      #partner_marquee1 span,
+      #partner_marquee2 span {
+        width: 216px;
+        height: 176px;
+      }
+    }
+
     @keyframes partner_marquee1 {
       0% {
         left: 0;
       }
       100% {
-        left: -3780px;
+        left: -3024px;
       }
     }
-  
+
     @keyframes partner_marquee2 {
       0% {
         right: 0;
       }
       100% {
-        right: -3780px;
-      }
-    }
-  
-    @media screen and (max-width: 1024px) {
-      padding: 0 0 10vw;
-  
-      .partner_marquee {
-        height: 176px;
-  
-        #partner_marquee1 div {
-          width: 6048px;
-          animation: partner_marquee1 45s linear infinite;
-          left: 0;
-        }
-  
-        #partner_marquee2 div {
-          width: 6048px;
-          animation: partner_marquee2 45s linear infinite;
-          right: 0;
-        }
-  
-        #partner_marquee1 span,
-        #partner_marquee2 span {
-          width: 216px;
-          height: 176px;
-        }
-      }
-  
-      @keyframes partner_marquee1 {
-        0% {
-          left: 0;
-        }
-        100% {
-          left: -3024px;
-        }
-      }
-  
-      @keyframes partner_marquee2 {
-        0% {
-          right: 0;
-        }
-        100% {
-          right: -3024px;
-        }
-      }
-    }
-  
-    @media screen and (max-width: 640px) {
-      .partner_marquee {
-        height: 132px;
-  
-        &#partner_marquee1 div {
-          width: 4536px;
-          animation: partner_marquee1 45s linear infinite;
-          left: 0;
-        }
-  
-        &#partner_marquee2 div {
-          width: 4536px;
-          animation: partner_marquee2 45s linear infinite;
-          right: 0;
-        }
-  
-        &#partner_marquee1 span,
-        &#partner_marquee2 span {
-          width: 162px;
-          height: 132px;
-        }
-      }
-  
-      @keyframes partner_marquee1 {
-        0% {
-          left: 0;
-        }
-        100% {
-          left: -2268px;
-        }
-      }
-  
-      @keyframes partner_marquee2 {
-        0% {
-          right: 0;
-        }
-        100% {
-          right: -2268px;
-        }
+        right: -3024px;
       }
     }
   }
-  
+
+  @media screen and (max-width: 640px) {
+    .partner_marquee {
+      height: 132px;
+
+      &#partner_marquee1 div {
+        width: 4536px;
+        animation: partner_marquee1 45s linear infinite;
+        left: 0;
+      }
+
+      &#partner_marquee2 div {
+        width: 4536px;
+        animation: partner_marquee2 45s linear infinite;
+        right: 0;
+      }
+
+      &#partner_marquee1 span,
+      &#partner_marquee2 span {
+        width: 162px;
+        height: 132px;
+      }
+    }
+
+    @keyframes partner_marquee1 {
+      0% {
+        left: 0;
+      }
+      100% {
+        left: -2268px;
+      }
+    }
+
+    @keyframes partner_marquee2 {
+      0% {
+        right: 0;
+      }
+      100% {
+        right: -2268px;
+      }
+    }
+  }
+}

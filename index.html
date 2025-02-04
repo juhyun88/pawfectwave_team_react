@@ -344,12 +344,12 @@
           <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
       </div>
   </div>
-  <div class="partner_marquee" id="partner_marquee2">
+  <!-- <div class="partner_marquee" id="partner_marquee2">
       <div>
           <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
           <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
       </div>
-  </div>
+  </div> -->
 </div>
 
 <footer id="ft">
@@ -391,23 +391,24 @@
     <script>
       const mainSlider = new Swiper('#mainSlider.swiper', {
         loop: true, // 무한 루프
-        slidesPerView: 1.5, // 한 번에 보이는 슬라이드 (중앙 슬라이드와 양쪽 흐릿한 슬라이드 포함)
-        // centeredSlides: true, // 활성 슬라이드를 중앙에 배치
+        slidesPerView: 1.2, // 중앙 슬라이드 100% 차지
         centeredSlides: true,
-        spaceBetween: 50, 
-        effect: "coverflow",
+        spaceBetween: 30, // 간격 조정
+        // effect: "coverflow",
         observer: true,
         observeParents: true,
+        loopFillGroupWithBlank: true,
+        centerInsufficientSlides: true,
         coverflowEffect: {
-      rotate: 0,
-      stretch: 100, // 옆 슬라이드 크기 조정
-      depth: 200, // 중앙과 옆 슬라이드 높이 동일하게 조정
-      modifier: 1,
-      slideShadows: false, // 슬라이드 그림자 제거
-    },
+          rotate: 0,
+          stretch: "auto", // 옆 슬라이드 간격을 자연스럽게 변경
+          depth: 100, // 중앙과 옆 슬라이드 높이 맞춤
+          modifier: 1,
+          slideShadows: false, // 그림자 제거
+        },
         autoplay: {
-        delay: 3000, // 3초마다 자동 전환
-        disableOnInteraction: false, // 사용자가 슬라이드를 터치해도 자동 재생 유지
+          delay: 3000, // 3초마다 자동 전환
+          disableOnInteraction: false, // 사용자가 슬라이드를 터치해도 자동 재생 유지
         },
         pagination: {
           el: '.swiper-pagination',
@@ -418,6 +419,7 @@
         },
       });
     </script>
+    
 
       <!-- Bootstrap JS, Popper.js, jQuery CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
