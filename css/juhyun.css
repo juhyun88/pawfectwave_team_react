@@ -1,19 +1,47 @@
 @charset "UTF-8";
-.d1ul {
+@media (max-width: 320px) {
+  #hd .logo_container {
+    order: 0;
+    margin-left: 20px;
+    margin-top: -50px;
+    width: 32px;
+    height: 31px;
+  }
+}
+#hd .topmeun {
+  margin-top: 10px;
+}
+@media (max-width: 320px) {
+  #hd .topmeun {
+    order: 2;
+  }
+}
+@media (max-width: 320px) {
+  #hd .reservation {
+    order: 1;
+  }
+}
+#hd .d1ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-
-.d1li {
+#hd .d1li {
+  display: inline-block;
   padding: 10px 15px;
   position: relative;
 }
-
+@media (max-width: 320px) {
+  #hd .d1li {
+    padding: 0;
+  }
+}
 #hd .d1li .d1a {
   text-decoration: none;
   font-size: 19px;
-  padding: 0 22.37px;
   line-height: 100px;
   color: black;
   font-weight: 400;
@@ -21,11 +49,11 @@
   display: flex;
   align-items: center;
 }
-
-#hd .d1li:hover .d2ul {
-  display: block;
+@media (max-width: 320px) {
+  #hd .d1li .d1a {
+    font-size: 12px;
+  }
 }
-
 #hd .d2ul {
   display: none;
   background-color: #93ab9d;
@@ -37,18 +65,27 @@
   top: 80%;
   left: 0;
 }
-
 #hd .d2li {
   padding: 5px 10px;
   text-align: center;
   font-size: 10px;
 }
 
+#hd #hd .d1li:hover .d2ul {
+  display: block;
+}
+
 .here {
-  margin-top: 10px;
   margin-right: 22.37px;
   width: 26.013px;
   height: 26.013px;
+}
+@media (max-width: 320px) {
+  .here {
+    margin-top: 10px;
+    margin-right: 0px;
+    width: 3rem;
+  }
 }
 
 .reservation-button {
@@ -65,6 +102,30 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
+}
+@media (max-width: 768px) {
+  .reservation-button {
+    width: 3rem;
+  }
+  .reservation-button span {
+    display: none;
+  }
+}
+
+.navbar-toggler {
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+}
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.collapse {
+  display: none;
+}
+.collapse.show {
+  display: block;
 }
 
 .swiper-container {
@@ -392,5 +453,44 @@
     100% {
       right: -2268px;
     }
+  }
+}
+
+@media (max-width: 320px) {
+  .logo-container {
+    align-self: flex-start;
+    margin-top: 0;
+  }
+}
+@media (min-width: 320px) {
+  .logo-container {
+    align-self: center;
+  }
+}
+@media (max-width: 320px) {
+  .logo {
+    width: 50px;
+  }
+}
+@media (max-width: 320px) {
+  .d1ul {
+    flex-wrap: wrap; /* 작은 화면에서는 메뉴가 두 줄로 나올 수 있게 */
+    gap: 8px;
+  }
+  .d1a {
+    font-size: 14px;
+    gap: 0;
+  }
+}
+@media (max-width: 320px) {
+  .reservation {
+    align-self: flex-start;
+    justify-self: flex-end;
+    margin-top: 0;
+  }
+}
+@media (min-width: 320px) {
+  .reservation {
+    align-self: center;
   }
 }

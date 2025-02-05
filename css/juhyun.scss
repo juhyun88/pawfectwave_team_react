@@ -4,28 +4,78 @@ $text-color: #1E1E1E;
 $highlight-color: #007bff;
 $border-radius: 10px;
 
+#hd{
+    .logo_container {
+      @media (max-width:320px) {
+        order: 0;
+        margin-left: 20px;
+        margin-top: -50px;
+        width: 32px;
+        height: 31px;
+      }
+    }
+  .topmeun
+  {
+    margin-top: 10px;
+    @media (max-width:320px){
+    order: 2;
+    }
+  }
+  .reservation{
+    @media (max-width:320px){
+    order: 1;
+  }
+}
 .d1ul{
   list-style: none;
   padding: 0;
   margin: 0;
-  
+  display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  // white-space: nowrap;
 }
 .d1li{
+  display: inline-block;
   padding: 10px 15px;
   position: relative;
+  @media (max-width:320px){
+    padding: 0;
+  }
+}
+.d1li .d1a {
+  text-decoration: none;
+  font-size: 19px;
+  // padding: 0 22.37px;
+  line-height: 100px;
+  color: black;
+  font-weight: 400;
+  font-family: "Noto Sans KR";
+  display: flex;
+  align-items: center;
+  @media (max-width:320px){
+    font-size: 12px;
+  }
+}
+.d2ul {
+  display: none;
+  background-color: #93ab9d;
+  width: max-content;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  top: 80%; // 마우스오버시 내려오는 공간 위치 조정
+  left: 0;
+}
+.d2li {
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 10px;
+}
 }
 
-#hd .d1li .d1a {
-    text-decoration: none;
-    font-size: 19px;
-    padding: 0 22.37px;
-    line-height: 100px;
-    color: black;
-    font-weight: 400;
-    font-family: "Noto Sans KR";
-    display: flex;
-    align-items: center;
-  }
+
+#hd 
 
   #hd .d1li {
     &:hover {
@@ -35,29 +85,15 @@ $border-radius: 10px;
       }
     }
   }
-  
-  #hd .d2ul {
-      display: none;
-      background-color: #93ab9d;
-      width: max-content;
-      white-space: nowrap;
-      padding: 0;
-      margin: 0;
-      top: 80%; // 마우스오버시 내려오는 공간 위치 조정
-      left: 0;
-  }
-  
-    #hd .d2li {
-      padding: 5px 10px;
-      text-align: center;
-      font-size: 10px;
-    }
-  
    .here{
-    margin-top: 10px;
     margin-right: 22.37px;
     width: 26.013px;
     height: 26.013px;
+    @media (max-width:320px){
+      margin-top: 10px;
+      margin-right: 0px;
+      width: 3rem;
+    }
    }
   .reservation-button {
     background-color: $primary-color;
@@ -73,6 +109,28 @@ $border-radius: 10px;
     align-items: center;
     justify-content: center;
     gap: 5px;
+    @media (max-width:768px) {
+      span {display:none;}
+      width:3rem;
+      
+    }
+  }
+  .navbar-toggler {
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+  
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  .collapse {
+    display: none;
+  
+    &.show {
+      display: block;
+    }
   }
 
 //메인슬라이드
@@ -447,5 +505,53 @@ $border-radius: 10px;
         right: -2268px;
       }
     }
+  }
+}
+
+//반응형
+//로고 위치
+@media (max-width: 320px) {
+  .logo-container {
+    align-self: flex-start;
+    margin-top: 0;
+  }
+}
+@media (min-width: 320px) {
+  .logo-container {
+    align-self: center;
+  }
+}
+@media (max-width: 320px) {
+  .logo {
+    width: 50px;
+    
+  }
+}
+
+//상단 bar 메뉴
+@media (max-width: 320px){
+  .d1ul {
+    flex-wrap: wrap; /* 작은 화면에서는 메뉴가 두 줄로 나올 수 있게 */
+    gap: 8px;
+  }
+
+  .d1a {
+    font-size: 14px;
+    gap: 0;
+  }
+}
+
+// 예약하기 및 지점위치 
+@media (max-width: 320px) {
+  .reservation
+   {
+    align-self: flex-start;
+    justify-self: flex-end;
+    margin-top: 0;
+  }
+}
+@media (min-width: 320px) {
+  .reservation {
+    align-self: center;
   }
 }
