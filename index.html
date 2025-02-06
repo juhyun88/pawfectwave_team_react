@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="./css/common.css">
 
     <!-- 커스텀 -->
-    <link rel="stylesheet" href="./css/eunhye.css">
+    <link rel="stylesheet" href="./css/eunhye.min.css">
     <link rel="stylesheet" href="./css/soyeong.min.css">
     <link rel="stylesheet" href="./css/hyuna.min.css">
     <link rel="stylesheet" href="./css/juhyun.min.css">
@@ -144,96 +144,92 @@
           </svg>            
      </a>
   </div>
+ <!--// eunhye  -->
 
 
-  <!-- eunhye -->
+ <!-- eunhye -->
  
-  <div class="eunhyeSection">   
-    <div class="ehcontainer" id="ehwave_love">
-      <div class="container2">
-        <div class="left col">
-          <div class="image-container">
-            <img src="./img/main_ci/love_1.png" alt="eunhye_love">
-  
-            <div class="lottie-container">
-              <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.3.0/dist/dotlottie-wc.js" type="module"></script>
-              <dotlottie-wc src="https://lottie.host/73e1b71a-a2a3-46b4-8bfa-ace4db272abf/AY9ai5onYv.lottie" autoplay loop></dotlottie-wc>
-            </div>
+  <div class="ehcontainer flex-column" id="ehwave_love">
+    <!-- 첫번째 -->
+    <div class="love_list d-md-flex justify-content-between align-items-center">
+      <div class="left_top">
+        <div class="image-container position-relative">
+          <img src="./img/main_ci/love_1.png" alt="eunhye_love" class="img-fluid">
+          <span class="position-absolute text-white w-100 top-50 start-50 translate-middle d-md-none text-center">사랑</span>
+          
+      
+          <div class="lottie-container">
+            <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.3.0/dist/dotlottie-wc.js" type="module"></script>
+            <dotlottie-wc src="https://lottie.host/73e1b71a-a2a3-46b4-8bfa-ace4db272abf/AY9ai5onYv.lottie" autoplay loop></dotlottie-wc>
           </div>
-        </div>
-        
-        <div class="right  col">
-          <span class="love-text">
-            <p>
-              <span class="highlight">사랑</span>은 가족의 일원으로서 사랑과  
-              보살핌을 받으며 소중한 시간을 
-              함께한 존재로써 <span class="highlight">사랑의 마음</span>으로  
-              <span class="highlight">서로 메세지</span>를 나누는 시간과  
-              되새기는 시간을 의미합니다.
-            </p>
-          </span>
         </div>
       </div>
-    </div>
-    
-     <div class="ehcontainer_hello" id="ehwave_hello">
-      <div class="container_hello">
-        <div class="left  col">
-          <div class="image-container">
-            <img src="./img/main_ci/Hello_2.png" alt="eunhye_hello">
-            
-            <div class="hello_2">
-              <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.3.0/dist/dotlottie-wc.js" type="module"></script>
-              <dotlottie-wc src="https://lottie.host/3b0c53d9-de38-4137-93d7-6d0a248d2b43/kEG79mLDll.lottie" autoplay loop></dotlottie-wc>
-            </div>
-          </div>
-        </div>
-  
-        <div class="hand-container">
-          <img src="./img/hand_hello.svg" alt="eunhye_hello_hand" class="hand-animation">
-        </div>
-  
-    
-        
-        <div class="right  col">
-          <span class="love-text">
-            <p>
-              <span class="highlight">인사</span>는 마지막 여행을 떠나는 반려동물에게 
-              단순한<span class="highlight">작별 인사</span>가 아닌 반려동물의  
-              <span class="highlight">삶과 마지막 여행</span>에 대한 마음을 담았습니다.
-            </p>
-          </span>
-        </div>
+      <div class="right d-none d-md-block">
+        <span class="love-text">
+          <p>
+            <span class="highlight">사랑</span>은 가족의 일원으로서 사랑과  
+            보살핌을 <br>받으며 소중한 시간을 함께한 존재로써 <span class="highlight">사랑의 마음</span>으로  
+            <span class="highlight">서로 메세지</span>를 나누는 시간과 되새기는 시간을 의미합니다.
+          </p>
+        </span>
       </div>
     </div>
   
-    <div class="ehcontainer" id="ehwave_Memories">
-      <div class="container_Memories">
-        <div class="left  col">
-          <div class="image-container">
-            <img src="./img/main_ci/Memories_3.png" alt="eunhye_Memories">
-  
-            <div class="Memories-container">
-              <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.3.0/dist/dotlottie-wc.js" type="module"></script>
-              <dotlottie-wc src="https://lottie.host/a144055c-a402-4ef1-8ecb-448cb9b71194/YFQN1mqXTV.lottie" autoplay loop></dotlottie-wc>
-            </div>
+    <!-- 두번째 -->
+    <div class="love_list d-flex flex-row-reverse justify-content-between align-items-center">
+      <div class="left">
+        <div class="image-container" style="position: relative;">
+          <img src="./img/main_ci/Hello_2.png" alt="eunhye_hello" class="img-fluid">
+          <span class="position-absolute text-white w-100 top-0 h-100 start-0  d-flex justify-content-center align-items-center  d-md-none">인사</span>
+          
+          <div class="hello_2">
+            <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.3.0/dist/dotlottie-wc.js" type="module"></script>
+            <dotlottie-wc src="https://lottie.host/3b0c53d9-de38-4137-93d7-6d0a248d2b43/kEG79mLDll.lottie" autoplay loop></dotlottie-wc>
+          </div>
+          
+          <div class="hand-container">
+            <img src="./img/main_ci/hand_hello.svg" alt="eunhye_hello_hand" class="hand-animation">
           </div>
         </div>
-        
-        <div class="right  col">
-          <span class="Memories-text">
-            <p>
-              <span class="highlight">추억</span>은 반려동물의 처음과 끝을 
-              함께하며  <span class="highlight">많은 추억을 공유</span>했던 
-              소중한 시간들을<span class="highlight">
-                기념</span>하는 의미를 담았습니다
+      </div>
   
-            </p>
-          </span>
+      <div class="right position-relative">
+        <span class="love-text">
+          <p>
+            <span class="highlight">인사</span>는 마지막 여행을 떠나는 반려동물에게<br>
+            </span>단순한 <span class="highlight">작별 인사</span>가 아닌 반려동물의  
+            <span class="highlight">삶과 <br>마지막 여행</span>에 대한 마음을 담았습니다.
+          </p>
+        </span>
+      </div>
+    </div>
+  
+    <!-- 세번째 -->
+    <div class="love_list d-flex justify-content-between align-items-center">
+      <div class="left_Memories position-relative">
+        <div class="image-container">
+          <img src="./img/main_ci/Memories_3.png" alt="eunhye_Memories" class="img-fluid">
+          <span class="position-absolute text-white w-100 top-50 start-50 translate-middle d-md-none text-center">추억</span>
+          <div class="Memories-container">
+            <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.3.0/dist/dotlottie-wc.js" type="module"></script>
+            <dotlottie-wc src="https://lottie.host/a144055c-a402-4ef1-8ecb-448cb9b71194/YFQN1mqXTV.lottie" autoplay loop></dotlottie-wc>
+          </div>
         </div>
+      </div>
+      <div class="right">
+        <span class="Memories-text">
+          <p>
+            <span class="highlight">추억</span>은 반려동물의 처음과 끝을 
+            함께하며  <span class="highlight">많은 추억을 공유</span>했던 
+            소중한 시간들을<span class="highlight">기념</span>하는 <br>의미를 담았습니다
+          </p>
+        </span>
       </div>
     </div>
   </div>
+
+
+
 <!--// eunhye -->
 
 
