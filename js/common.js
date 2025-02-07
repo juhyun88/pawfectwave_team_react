@@ -28,6 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("스크롤 멈춤!");
       }, 200);
     });
+
+    const mbtn = document.querySelector(".hamburger-menu");
+    const widemenu = document.querySelector(".topmenu");
+    
+    mbtn.addEventListener('click', function(){
+      widemenu.classList.add("wide");
+    })
+    
+
+
   });
   
   
