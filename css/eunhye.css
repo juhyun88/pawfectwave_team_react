@@ -46,19 +46,20 @@
   padding: 20px;
   border-radius: 8px;
 }
-#ehwave_love .left,
-#ehwave_love .right,
-#ehwave_love .left_Memories {
-  margin-top: -100px;
+@media (min-width: 1280px) {
+  #ehwave_love .left,
+  #ehwave_love .right,
+  #ehwave_love .left_Memories {
+    margin-top: -100px;
+  }
 }
 #ehwave_love .position-absolute.text-white {
   font-family: "Paperlogy 6 SemiBold", sans-serif;
-  font-size: 40px;
+  font-size: min(40px, 7vw);
   color: white;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-60%, -50%);
   text-align: center;
 }
 #ehwave_love .love_list {
@@ -82,7 +83,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   color: white;
   font-size: 24px;
   text-align: center;
@@ -90,11 +90,11 @@
 }
 #ehwave_love .lottie-container, #ehwave_love .hello_2 {
   position: absolute;
-  top: -40%;
-  left: 20%;
-  transform: translateX(-50%);
-  width: 500px;
-  height: 500px;
+  top: 0;
+  left: 0;
+  transform: translate(-24%, -24%);
+  width: 180%;
+  height: 180%;
   pointer-events: none;
 }
 #ehwave_love .Memories-container {
@@ -107,26 +107,17 @@
   pointer-events: none;
 }
 #ehwave_love dotlottie-wc {
-  width: 900px;
-  height: 900px;
+  width: 100%;
+  height: 100%;
 }
 #ehwave_love .love-text .Memories-text {
   text-align: center;
 }
 @media (max-width: 480px) {
-  #ehwave_love .lottie-container, #ehwave_love .hello_2 {
-    width: 200px;
-    height: 200px;
-    top: -20%;
-  }
   #ehwave_love .Memories-container {
     width: 400px;
     height: 400px;
     top: 0%;
-  }
-  #ehwave_love dotlottie-wc {
-    width: 400px;
-    height: 400px;
   }
 }
 #ehwave_love .love-text p, #ehwave_love .Memories-text p {
@@ -304,4 +295,10 @@
   font-size: 18px;
   margin-bottom: 15px;
   line-height: 1.6;
+}
+
+@media (max-width: 1200px) {
+  #ehwave_love .right p {
+    font-size: min(30px, 2.2vw);
+  }
 }
