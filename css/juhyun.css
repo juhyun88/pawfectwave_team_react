@@ -37,6 +37,20 @@
   background-color: #1E1E1E; /* 햄버거 메뉴가 잘 보이도록 색상 설정 */
   transition: 0.3s ease;
 }
+#hd .hamburger-menu {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 15px;
+}
+#hd .hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: black; /* 햄버거 메뉴가 잘 보이도록 색상 설정 */
+  transition: 0.3s ease;
+}
 #hd .d1ul {
   list-style: none;
   padding: 0;
@@ -78,7 +92,41 @@
 #hd .d1ul .d1li a:hover {
   color: #006838 !important;
 }
-#hd .d1ul .d1li .d1a {
+#hd .d1ul .d1li .here {
+  margin-right: 22.37px;
+  width: 26.013px;
+  height: 26.013px;
+}
+@media (max-width: 320px) {
+  #hd .d1ul .d1li .here {
+    margin-right: 0px;
+    width: 3rem;
+  }
+}
+#hd .d1ul .d1li .reservation-button {
+  background-color: #006838;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  width: 10rem;
+  height: 3rem;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+@media (max-width: 768px) {
+  #hd .d1ul .d1li .reservation-button {
+    width: 3rem;
+  }
+  #hd .d1ul .d1li .reservation-button span {
+    display: none;
+  }
+}
+#hd .d1ul .d1li .reservation-button .d1a {
   text-decoration: none;
   font-size: 19px;
   font-family: "Paperlogy 4 Regular";
@@ -88,11 +136,11 @@
   align-items: center;
 }
 @media (max-width: 320px) {
-  #hd .d1ul .d1li .d1a {
+  #hd .d1ul .d1li .reservation-button .d1a {
     font-size: 12px;
   }
 }
-#hd .d1ul .d1li .d2ul {
+#hd .d1ul .d1li .reservation-button .d2ul {
   height: 0;
   overflow: hidden;
   transition: 0.5s;
@@ -105,29 +153,29 @@
   left: 0;
   min-width: 150px;
 }
-#hd .d1ul .d1li .d2ul:before {
+#hd .d1ul .d1li .reservation-button .d2ul:before {
   content: "";
   display: block;
   height: 4rem;
 }
-#hd .d1ul .d1li .d2ul .d2li {
+#hd .d1ul .d1li .reservation-button .d2ul .d2li {
   padding: 5px 10px;
   text-align: center;
   font-size: 16px;
   line-height: 2;
 }
-#hd .here {
+#hd .d1ul .here {
   margin-right: 22.37px;
   width: 26.013px;
   height: 26.013px;
 }
 @media (max-width: 320px) {
-  #hd .here {
+  #hd .d1ul .here {
     margin-right: 0px;
     width: 3rem;
   }
 }
-#hd .reservation-button {
+#hd .d1ul .reservation-button {
   background-color: #006838;
   color: white;
   border: none;
@@ -142,45 +190,45 @@
   gap: 5px;
 }
 @media (max-width: 768px) {
-  #hd .reservation-button {
+  #hd .d1ul .reservation-button {
     width: 3rem;
   }
-  #hd .reservation-button span {
+  #hd .d1ul .reservation-button span {
     display: none;
   }
 }
-#hd .navbar-toggler {
+#hd .d1ul .navbar-toggler {
   border: none;
   background: transparent;
   font-size: 1.5rem;
 }
-#hd .navbar-toggler:focus {
+#hd .d1ul .navbar-toggler:focus {
   outline: none;
 }
-#hd .collapse {
+#hd .d1ul .collapse {
   display: none;
 }
-#hd .collapse.show {
+#hd .d1ul .collapse.show {
   display: block;
 }
-
-#jy_swiper {
-  /* 하단 막대 바 (페이지네이션) */
+#hd #jy_swiper {
+  /* 텍스트 오른쪽 정렬 */
+  /* 텍스트 왼쪽 정렬 */
 }
-#jy_swiper.swiper-container {
+#hd #jy_swiper.swiper-container {
   width: 100%;
   height: v100;
   margin: 0 auto;
   overflow: visible;
   position: relative;
   /* 메인 슬라이드 */
-  /* 양 옆 슬라이드 */
+  /* 하단 막대 바 (페이지네이션) */
 }
-#jy_swiper.swiper-container .swiper-wrapper {
+#hd #jy_swiper.swiper-container .swiper-wrapper {
   display: flex;
   align-items: center;
 }
-#jy_swiper.swiper-container .swiper-slide {
+#hd #jy_swiper.swiper-container .swiper-slide {
   flex-shrink: 0;
   width: 1280px;
   height: 600px;
@@ -191,7 +239,7 @@
   transition: transform 0.5s ease, opacity 0.5s ease;
   border-radius: 20px;
 }
-#jy_swiper.swiper-container .swiper-slide img {
+#hd #jy_swiper.swiper-container .swiper-slide img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -200,64 +248,36 @@
   border-radius: 20px;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
-#jy_swiper.swiper-container .swiper-slide-active {
+#hd #jy_swiper.swiper-container .swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+  /* 양 옆 슬라이드 */
+}
+#hd #jy_swiper.swiper-container .swiper-slide-active img {
   transform: scale(1);
   opacity: 1;
 }
-#jy_swiper.swiper-container .swiper-slide-active img {
-  transform: scale(1);
-  opacity: 1;
-}
-#jy_swiper.swiper-container .swiper-slide-prev,
-#jy_swiper.swiper-container .swiper-slide-next {
-  transform: scale(0.9);
-  opacity: 0.7;
-}
-#jy_swiper .swiper-pagination {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-#jy_swiper .swiper-pagination .swiper-pagination-bullet {
-  width: 50px;
-  height: 8px;
-  background-color: #e0e0e0;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-#jy_swiper .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #008000;
-}
-
-#jh h1, h2 {
+#hd #jy_swiper.swiper-container .swiper-slide-active #jh h1, #hd #jy_swiper.swiper-container .swiper-slide-active h2 {
   font-family: "Paperlogy 4 Regular";
   font-weight: 400;
 }
-
-#jh h1 {
+#hd #jy_swiper.swiper-container .swiper-slide-active #jh h1 {
   font-size: 1.125rem;
   color: #006838;
   margin-bottom: 40px;
 }
-
-#jh h2 {
+#hd #jy_swiper.swiper-container .swiper-slide-active #jh h2 {
   font-size: 1.875rem;
   color: #1E1E1E;
   margin-bottom: 56px;
 }
-
-#jh p {
+#hd #jy_swiper.swiper-container .swiper-slide-active #jh p {
   color: rgba(30, 30, 30, 0.7);
   font-family: "Paperlogy 3 Light";
   font-size: 1.125rem;
   font-weight: 300;
 }
-
-.btn_petros {
+#hd #jy_swiper.swiper-container .swiper-slide-active .btn_petros {
   margin-top: 47px;
   font-family: "Noto Sans KR";
   width: 264px;
@@ -269,30 +289,26 @@
   cursor: pointer;
   background-color: #FFF;
 }
-
-.btn_petros:hover {
+#hd #jy_swiper.swiper-container .swiper-slide-active .btn_petros:hover {
   background-color: #93ab9d;
   border: none;
   color: white;
 }
-
-.petros {
+#hd #jy_swiper.swiper-container .swiper-slide-active .petros {
   width: 100%;
   padding-top: 75%;
   overflow: hidden;
   border-radius: 20px 20px 100px 20px;
   position: relative;
 }
-
-.petros_wave {
+#hd #jy_swiper.swiper-container .swiper-slide-active .petros_wave {
   width: 100%;
   padding-top: 75%;
   overflow: hidden;
   border-radius: 20px 20px 20px 100px;
   position: relative;
 }
-
-.petros img {
+#hd #jy_swiper.swiper-container .swiper-slide-active .petros img {
   position: absolute;
   top: 0;
   left: 0;
@@ -302,8 +318,7 @@
      object-fit: cover;
   border-radius: 20px 20px 100px 20px;
 }
-
-.petros_wave img {
+#hd #jy_swiper.swiper-container .swiper-slide-active .petros_wave img {
   position: absolute;
   top: 0;
   left: 0;
@@ -313,110 +328,199 @@
      object-fit: cover;
   border-radius: 20px 20px 20px 100px;
 }
-
-.petrossize {
+#hd #jy_swiper.swiper-container .swiper-slide-active .swiper-slide-prev,
+#hd #jy_swiper.swiper-container .swiper-slide-active .swiper-slide-next {
+  transform: scale(0.9);
+  opacity: 0.7;
+}
+#hd #jy_swiper.swiper-container .swiper-pagination {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+#hd #jy_swiper.swiper-container .swiper-pagination .swiper-pagination-bullet {
+  width: 50px;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#hd #jy_swiper.swiper-container .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #008000;
+}
+#hd #jy_swiper #jh h1, #hd #jy_swiper h2 {
+  font-family: "Paperlogy 4 Regular";
+  font-weight: 400;
+}
+#hd #jy_swiper #jh h1 {
+  font-size: 1.125rem;
+  color: #006838;
+  margin-bottom: 40px;
+}
+#hd #jy_swiper #jh h2 {
+  font-size: 1.875rem;
+  color: #1E1E1E;
+  margin-bottom: 56px;
+}
+#hd #jy_swiper #jh p {
+  color: rgba(30, 30, 30, 0.7);
+  font-family: "Paperlogy 3 Light";
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+#hd #jy_swiper .btn_petros {
+  margin-top: 47px;
+  font-family: "Noto Sans KR";
+  width: 264px;
+  height: 67px;
+  color: #1E1E1E;
+  border: 1px solid #1E1E1E;
+  font-size: 30px;
+  font-weight: 400;
+  cursor: pointer;
+  background-color: #FFF;
+}
+#hd #jy_swiper .btn_petros:hover {
+  background-color: #93ab9d;
+  border: none;
+  color: white;
+}
+#hd #jy_swiper .petros {
+  width: 100%;
+  padding-top: 75%;
+  overflow: hidden;
+  border-radius: 20px 20px 100px 20px;
+  position: relative;
+}
+#hd #jy_swiper .petros_wave {
+  width: 100%;
+  padding-top: 75%;
+  overflow: hidden;
+  border-radius: 20px 20px 20px 100px;
+  position: relative;
+}
+#hd #jy_swiper .petros img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 100px 20px;
+}
+#hd #jy_swiper .petros_wave img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 20px 100px;
+}
+#hd #jy_swiper .petrossize {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-/* 텍스트 오른쪽 정렬 */
-.text-box.text-end {
+#hd #jy_swiper .text-box.text-end {
   text-align: right;
 }
-
-/* 텍스트 왼쪽 정렬 */
-.text-box.text-start {
+#hd #jy_swiper .text-box.text-start {
   text-align: left;
 }
-
-.partner_list {
+#hd #jy_swiper .partner_list {
   padding: 60px 0;
 }
-.partner_list .partner_marquee {
+#hd #jy_swiper .partner_list .partner_marquee {
   width: 100%;
   height: 220px;
   overflow: hidden;
   position: relative;
   margin: 30px 0;
 }
-.partner_list .partner_marquee div {
+#hd #jy_swiper .partner_list .partner_marquee div {
   display: flex;
   height: 100%;
   position: absolute;
   overflow: hidden;
 }
-.partner_list .partner_marquee#partner_marquee1 div {
+#hd #jy_swiper .partner_list .partner_marquee#partner_marquee1 div {
   width: 7560px;
   animation: partner_marquee1 45s linear infinite;
   left: 0;
 }
-.partner_list .partner_marquee#partner_marquee2 div {
+#hd #jy_swiper .partner_list .partner_marquee#partner_marquee2 div {
   width: 7560px;
   animation: partner_marquee2 45s linear infinite;
   right: 0;
 }
-.partner_list .partner_marquee span {
+#hd #jy_swiper .partner_list .partner_marquee span {
   height: 100%;
   width: 270px;
   height: 220px;
   position: relative;
   display: block;
 }
-.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 13) {
+#hd #jy_swiper .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 13) {
   background: url("http://da-bong.com/dabong/2024/img/partner/logo_01.png") no-repeat 50% 50%;
   background-size: auto 100%;
 }
-.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 12) {
+#hd #jy_swiper .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 12) {
   background: url("http://da-bong.com/dabong/2024/img/partner/logo_02.png") no-repeat 50% 50%;
   background-size: auto 100%;
 }
-.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 11) {
+#hd #jy_swiper .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 11) {
   background: url("http://da-bong.com/dabong/2024/img/partner/logo_03.png") no-repeat 50% 50%;
   background-size: auto 100%;
 }
-.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 10) {
+#hd #jy_swiper .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 10) {
   background: url("http://da-bong.com/dabong/2024/img/partner/logo_04.png") no-repeat 50% 50%;
   background-size: auto 100%;
 }
-.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 9) {
+#hd #jy_swiper .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 9) {
   background: url("http://da-bong.com/dabong/2024/img/partner/logo_05.png") no-repeat 50% 50%;
   background-size: auto 100%;
 }
-.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 8) {
+#hd #jy_swiper .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 8) {
   background: url("http://da-bong.com/dabong/2024/img/partner/logo_06.png") no-repeat 50% 50%;
   background-size: auto 100%;
 }
-.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 7) {
+#hd #jy_swiper .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 7) {
   background: url("http://da-bong.com/dabong/2024/img/partner/logo_07.png") no-repeat 50% 50%;
   background-size: auto 100%;
 }
-.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 6) {
+#hd #jy_swiper .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 6) {
   background: url("http://da-bong.com/dabong/2024/img/partner/logo_08.png") no-repeat 50% 50%;
   background-size: auto 100%;
 }
-.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 5) {
+#hd #jy_swiper .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 5) {
   background: url("http://da-bong.com/dabong/2024/img/partner/logo_09.png") no-repeat 50% 50%;
   background-size: auto 100%;
 }
-.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 4) {
+#hd #jy_swiper .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 4) {
   background: url("http://da-bong.com/dabong/2024/img/partner/logo_10.png") no-repeat 50% 50%;
   background-size: auto 100%;
 }
-.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 3) {
+#hd #jy_swiper .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 3) {
   background: url("http://da-bong.com/dabong/2024/img/partner/logo_11.png") no-repeat 50% 50%;
   background-size: auto 100%;
 }
-.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 2) {
+#hd #jy_swiper .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 2) {
   background: url("http://da-bong.com/dabong/2024/img/partner/logo_12.png") no-repeat 50% 50%;
   background-size: auto 100%;
 }
-.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 1) {
+#hd #jy_swiper .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 1) {
   background: url("http://da-bong.com/dabong/2024/img/partner/logo_13.png") no-repeat 50% 50%;
   background-size: auto 100%;
 }
-.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n) {
+#hd #jy_swiper .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n) {
   background: url("http://da-bong.com/dabong/2024/img/partner/logo_14.png") no-repeat 50% 50%;
   background-size: auto 100%;
 }
@@ -437,24 +541,24 @@
   }
 }
 @media screen and (max-width: 1024px) {
-  .partner_list {
+  #hd #jy_swiper .partner_list {
     padding: 0 0 10vw;
   }
-  .partner_list .partner_marquee {
+  #hd #jy_swiper .partner_list .partner_marquee {
     height: 176px;
   }
-  .partner_list .partner_marquee #partner_marquee1 div {
+  #hd #jy_swiper .partner_list .partner_marquee #partner_marquee1 div {
     width: 6048px;
     animation: partner_marquee1 45s linear infinite;
     left: 0;
   }
-  .partner_list .partner_marquee #partner_marquee2 div {
+  #hd #jy_swiper .partner_list .partner_marquee #partner_marquee2 div {
     width: 6048px;
     animation: partner_marquee2 45s linear infinite;
     right: 0;
   }
-  .partner_list .partner_marquee #partner_marquee1 span,
-  .partner_list .partner_marquee #partner_marquee2 span {
+  #hd #jy_swiper .partner_list .partner_marquee #partner_marquee1 span,
+  #hd #jy_swiper .partner_list .partner_marquee #partner_marquee2 span {
     width: 216px;
     height: 176px;
   }
@@ -476,20 +580,20 @@
   }
 }
 @media screen and (max-width: 640px) {
-  .partner_list .partner_marquee {
+  #hd #jy_swiper .partner_list .partner_marquee {
     height: 132px;
   }
-  .partner_list .partner_marquee#partner_marquee1 div {
+  #hd #jy_swiper .partner_list .partner_marquee#partner_marquee1 div {
     width: 4536px;
     animation: partner_marquee1 45s linear infinite;
     left: 0;
   }
-  .partner_list .partner_marquee#partner_marquee2 div {
+  #hd #jy_swiper .partner_list .partner_marquee#partner_marquee2 div {
     width: 4536px;
     animation: partner_marquee2 45s linear infinite;
     right: 0;
   }
-  .partner_list .partner_marquee#partner_marquee1 span, .partner_list .partner_marquee#partner_marquee2 span {
+  #hd #jy_swiper .partner_list .partner_marquee#partner_marquee1 span, #hd #jy_swiper .partner_list .partner_marquee#partner_marquee2 span {
     width: 162px;
     height: 132px;
   }
@@ -510,42 +614,41 @@
     }
   }
 }
-
 @media (max-width: 320px) {
-  .logo-container {
+  #hd #jy_swiper .logo-container {
     align-self: flex-start;
     margin-top: 0;
   }
 }
 @media (min-width: 320px) {
-  .logo-container {
+  #hd #jy_swiper .logo-container {
     align-self: center;
   }
 }
 @media (max-width: 320px) {
-  .logo {
+  #hd #jy_swiper .logo {
     width: 50px;
   }
 }
 @media (max-width: 320px) {
-  .d1ul {
+  #hd #jy_swiper .d1ul {
     flex-wrap: wrap; /* 작은 화면에서는 메뉴가 두 줄로 나올 수 있게 */
     gap: 8px;
   }
-  .d1a {
+  #hd #jy_swiper .d1a {
     font-size: 14px;
     gap: 0;
   }
 }
 @media (max-width: 320px) {
-  .reservation {
+  #hd #jy_swiper .reservation {
     align-self: flex-start;
     justify-self: flex-end;
     margin-top: 0;
   }
 }
 @media (min-width: 320px) {
-  .reservation {
+  #hd #jy_swiper .reservation {
     align-self: center;
   }
 }
