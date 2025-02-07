@@ -1,25 +1,41 @@
 @charset "UTF-8";
+.fixed #hd {
+  background: rgba(255, 255, 255, 0.5); /* 반투명 배경 */
+  backdrop-filter: blur(10px); /* 배경 흐리게 */
+  -webkit-backdrop-filter: blur(10px); /* Safari 지원 */
+}
+.fixed.scrollup #hd {
+  transform: translateY(-100%);
+}
+
+#hd {
+  transition: 0.5s;
+}
 @media (max-width: 320px) {
   #hd .logo_container {
-    order: 0;
-    margin-left: 20px;
-    margin-top: -50px;
     width: 32px;
     height: 31px;
   }
 }
-#hd .topmeun {
-  margin-top: 10px;
-}
-@media (max-width: 320px) {
-  #hd .topmeun {
-    order: 2;
-  }
-}
 @media (max-width: 320px) {
   #hd .reservation {
-    order: 1;
+    margin-top: 30px;
+    margin-right: 40px;
   }
+}
+#hd .hamburger-menu {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 15px;
+}
+#hd .hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #1E1E1E; /* 햄버거 메뉴가 잘 보이도록 색상 설정 */
+  transition: 0.3s ease;
 }
 #hd .d1ul {
   list-style: none;
@@ -27,74 +43,96 @@
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 60px;
 }
-#hd .d1li {
+#hd .d1ul:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 104, 56, 0.8);
+  height: 0;
+  transition: 0.5s;
+}
+#hd .d1ul a {
+  color: white;
+}
+#hd .d1ul a:hover {
+  font-weight: 600;
+}
+#hd .d1ul:hover:before {
+  height: 280px;
+}
+#hd .d1ul:hover .d2ul {
+  height: 280px !important;
+}
+#hd .d1ul .d1li {
   display: inline-block;
-  padding: 10px 15px;
   position: relative;
 }
-@media (max-width: 320px) {
-  #hd .d1li {
-    padding: 0;
-  }
+#hd .d1ul .d1li:hover .d1a {
+  color: #006838 !important;
 }
-#hd .d1li .d1a {
+#hd .d1ul .d1li a:hover {
+  color: #006838 !important;
+}
+#hd .d1ul .d1li .d1a {
   text-decoration: none;
   font-size: 19px;
-  line-height: 100px;
+  font-family: "Paperlogy 4 Regular";
   color: black;
-  font-weight: 400;
-  font-family: "Noto Sans KR";
+  font-weight: 500;
   display: flex;
   align-items: center;
 }
 @media (max-width: 320px) {
-  #hd .d1li .d1a {
+  #hd .d1ul .d1li .d1a {
     font-size: 12px;
   }
 }
-#hd .d2ul {
-  display: none;
-  background-color: #93ab9d;
+#hd .d1ul .d1li .d2ul {
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
   width: -moz-max-content;
   width: max-content;
   white-space: nowrap;
   padding: 0;
   margin: 0;
-  top: 80%;
+  top: 100%;
   left: 0;
+  min-width: 150px;
 }
-#hd .d2li {
+#hd .d1ul .d1li .d2ul:before {
+  content: "";
+  display: block;
+  height: 4rem;
+}
+#hd .d1ul .d1li .d2ul .d2li {
   padding: 5px 10px;
   text-align: center;
-  font-size: 10px;
+  font-size: 16px;
+  line-height: 2;
 }
-
-#hd #hd .d1li:hover .d2ul {
-  display: block;
-}
-
-.here {
+#hd .here {
   margin-right: 22.37px;
   width: 26.013px;
   height: 26.013px;
 }
 @media (max-width: 320px) {
-  .here {
-    margin-top: 10px;
+  #hd .here {
     margin-right: 0px;
     width: 3rem;
   }
 }
-
-.reservation-button {
+#hd .reservation-button {
   background-color: #006838;
   color: white;
   border: none;
   border-radius: 30px;
-  width: 10rem;
-  height: 3rem;
+  padding: 8px 15px;
   font-size: 1rem;
   font-weight: bold;
   transition: background-color 0.3s, transform 0.2s;
@@ -104,31 +142,32 @@
   gap: 5px;
 }
 @media (max-width: 768px) {
-  .reservation-button {
+  #hd .reservation-button {
     width: 3rem;
   }
-  .reservation-button span {
+  #hd .reservation-button span {
     display: none;
   }
 }
-
-.navbar-toggler {
+#hd .navbar-toggler {
   border: none;
   background: transparent;
   font-size: 1.5rem;
 }
-.navbar-toggler:focus {
+#hd .navbar-toggler:focus {
   outline: none;
 }
-
-.collapse {
+#hd .collapse {
   display: none;
 }
-.collapse.show {
+#hd .collapse.show {
   display: block;
 }
 
-.swiper-container {
+#jy_swiper {
+  /* 하단 막대 바 (페이지네이션) */
+}
+#jy_swiper.swiper-container {
   width: 100%;
   height: v100;
   margin: 0 auto;
@@ -137,11 +176,11 @@
   /* 메인 슬라이드 */
   /* 양 옆 슬라이드 */
 }
-.swiper-container .swiper-wrapper {
+#jy_swiper.swiper-container .swiper-wrapper {
   display: flex;
   align-items: center;
 }
-.swiper-container .swiper-slide {
+#jy_swiper.swiper-container .swiper-slide {
   flex-shrink: 0;
   width: 1280px;
   height: 600px;
@@ -152,7 +191,7 @@
   transition: transform 0.5s ease, opacity 0.5s ease;
   border-radius: 20px;
 }
-.swiper-container .swiper-slide img {
+#jy_swiper.swiper-container .swiper-slide img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -161,22 +200,20 @@
   border-radius: 20px;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
-.swiper-container .swiper-slide-active {
+#jy_swiper.swiper-container .swiper-slide-active {
   transform: scale(1);
   opacity: 1;
 }
-.swiper-container .swiper-slide-active img {
+#jy_swiper.swiper-container .swiper-slide-active img {
   transform: scale(1);
   opacity: 1;
 }
-.swiper-container .swiper-slide-prev,
-.swiper-container .swiper-slide-next {
+#jy_swiper.swiper-container .swiper-slide-prev,
+#jy_swiper.swiper-container .swiper-slide-next {
   transform: scale(0.9);
   opacity: 0.7;
 }
-
-/* 하단 막대 바 (페이지네이션) */
-.swiper-pagination {
+#jy_swiper .swiper-pagination {
   position: absolute;
   bottom: 20px;
   width: 100%;
@@ -184,7 +221,7 @@
   justify-content: center;
   gap: 10px;
 }
-.swiper-pagination .swiper-pagination-bullet {
+#jy_swiper .swiper-pagination .swiper-pagination-bullet {
   width: 50px;
   height: 8px;
   background-color: #e0e0e0;
@@ -192,7 +229,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.swiper-pagination .swiper-pagination-bullet-active {
+#jy_swiper .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #008000;
 }
 
@@ -239,23 +276,41 @@
   color: white;
 }
 
-.petros_box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .petros {
-  width: 629px;
-  height: 475px;
+  width: 100%;
+  padding-top: 75%;
   overflow: hidden;
   border-radius: 20px 20px 100px 20px;
+  position: relative;
 }
 
 .petros_wave {
-  width: 629px;
-  height: 475px;
+  width: 100%;
+  padding-top: 75%;
   overflow: hidden;
+  border-radius: 20px 20px 20px 100px;
+  position: relative;
+}
+
+.petros img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 100px 20px;
+}
+
+.petros_wave img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 20px 20px 20px 100px;
 }
 
