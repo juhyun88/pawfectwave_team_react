@@ -1,71 +1,183 @@
-$primary-color: #006838;
-$light-color: #93ab9d;
-$text-color: #1E1E1E;
-$highlight-color: #007bff;
-$border-radius: 10px;
 
-.d1ul{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  
-}
-.d1li{
-  padding: 10px 15px;
-  position: relative;
-}
+  $primary-color: #006838;
+  $light-color: #93ab9d;
+  $text-color: #1E1E1E;
+  $highlight-color: #007bff;
+  $border-radius: 10px;
 
-#hd .d1li .d1a {
-    text-decoration: none;
-    font-size: 19px;
-    padding: 0 22.37px;
-    line-height: 100px;
-    color: black;
-    font-weight: 400;
-    font-family: "Noto Sans KR";
-    display: flex;
-    align-items: center;
+
+
+
+//스크롤이벤트 감지
+
+.fixed{
+  //스크롤 시작
+  #hd{
+ 
+    background: rgba(255, 255, 255, 0.5); /* 반투명 배경 */
+    backdrop-filter: blur(10px); /* 배경 흐리게 */
+    -webkit-backdrop-filter: blur(10px); /* Safari 지원 */
   }
+  &.scrollup{
+    #hd{
+      transform: translateY(-100%)
+    }
+  }
+}
 
-  #hd .d1li {
-    &:hover {
-      .d2ul {
-        display: block;
+
+#hd{
+
+  transition: 0.5s;
+    .logo_container {
+      @media (max-width:320px) {
         
+        
+        width: 32px;
+        height: 31px;
       }
     }
+   
+  .reservation{
+      @media (max-width:320px){  
+      margin-top: 30px;
+      margin-right: 40px;
+      }
   }
-  
-  #hd .d2ul {
-      display: none;
-      background-color: #93ab9d;
-      width: max-content;
-      white-space: nowrap;
-      padding: 0;
-      margin: 0;
-      top: 80%; // 마우스오버시 내려오는 공간 위치 조정
-      left: 0;
+  .hamburger-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 15px;
   }
+
+  .hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: $text-color; /* 햄버거 메뉴가 잘 보이도록 색상 설정 */
+    transition: 0.3s ease;
   
-    #hd .d2li {
-      padding: 5px 10px;
-      text-align: center;
-      font-size: 10px;
+  }
+  .d1ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+      flex-wrap: wrap;
+      gap: 60px;
+    // white-space: nowrap;
+    &:before{
+      content: "";
+      display: block;
+      position: absolute;
+      top:100%;
+      left:0; width:100%;
+      background-color: #d0dbd580;
+      height: 0;
+      transition: 0.5s;
+
     }
-  
+    a{
+      color:rgb(153, 148, 148);
+      &:hover{
+          font-weight: 600;
+        }
+        }
+      
+    
+   
+    &:hover{
+      &:before{
+        height: 280px;
+      }
+      .d2ul {
+        height:280px !important;
+        // background-color: red;
+
+      }
+    }
+    .d1li{
+      display: inline-block;
+      position: relative; 
+
+      &:hover{
+        .d1a{
+          color:#006838 !important; //대메뉴활성화
+        }
+      }
+
+      a:hover{
+        color:#006838 !important; //대메뉴활성화
+        
+      }
+
+
+      .d1a {
+        text-decoration: none;
+        font-size: 19px;
+        // padding: 0 22.37px;
+        // font-family: 'Paperlogy 5 Medium';
+        font-family: "Paperlogy 4 Regular";
+        color: black;
+        font-weight: 500;
+        // letter-spacing: -0.085em;
+        // font-family: "Noto Sans KR";
+        display: flex;
+        align-items: center;
+        @media (max-width:320px){
+          font-size: 12px;
+        }
+      }
+      .d2ul {
+        height:0;
+        overflow: hidden;
+        transition: 0.5s;       
+        width: max-content;
+        white-space: nowrap;
+        padding: 0;
+        margin: 0;
+        top: 100%; // 마우스오버시 내려오는 공간 위치 조정
+        left: 0;
+        min-width:150px; 
+        &:before{
+          content: "";
+          display: block;
+          height: 4rem;
+        }     
+        .d2li {
+          padding: 5px 10px;
+          text-align: center;
+          font-size: 16px;
+          line-height: 2;
+     
+        }
+      }
+    }
+
+    a:hover{
+      color:#006838 !important; //대메뉴활성화
+  }
+
+
+
+
    .here{
-    margin-top: 10px;
     margin-right: 22.37px;
     width: 26.013px;
     height: 26.013px;
+    @media (max-width:320px){
+      margin-right: 0px;
+      width: 3rem;
+    }
    }
   .reservation-button {
     background-color: $primary-color;
     color: white;
     border: none;
     border-radius: 30px;
-    width: 10rem;
-    height: 3rem;
+    padding: 8px 15px;
     font-size: 1rem;
     font-weight: bold;
     transition: background-color 0.3s, transform 0.2s;
@@ -73,10 +185,36 @@ $border-radius: 10px;
     align-items: center;
     justify-content: center;
     gap: 5px;
+    @media (max-width:768px) {
+      span {display:none;}
+      width:3rem;
+      
+    }
   }
+  .navbar-toggler {
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+  
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  .collapse {
+    display: none;
+  
+    &.show {
+      display: block;
+    }
+  }
+}
+}
 
+
+#jy_swiper{
 //메인슬라이드
-  .swiper-container {
+  &.swiper-container {
     width: 100%;
     height: v100;
     margin: 0 auto;
@@ -153,195 +291,269 @@ $border-radius: 10px;
       background-color: #008000; // 활성화된 막대 색상
     }
   }
+}
 
-  #jh h1, h2 {
-    font-family: "Paperlogy 4 Regular";
-    font-weight: 400;
-  }
-  
-  #jh h1 {
-    font-size: 1.125rem;
-    color: $primary-color;
-    margin-bottom: 40px;
-  }
-  
-  #jh h2 {
-    font-size: 1.875rem;
-    color: $text-color;
-    margin-bottom: 56px;
-  }
-  
-  #jh p {
-    color: rgba($text-color, 0.7);
-    font-family: "Paperlogy 3 Light";
-    font-size: 1.125rem;
-    font-weight: 300;
-  }
+#jh h1, h2 {
+  font-family: "Paperlogy 4 Regular";
+  font-weight: 400;
+}
 
-  .btn_petros{
-    margin-top:47px;
-    font-family: "Noto Sans KR";
-    width: 264px;
-    height: 67px;
-    color: #1E1E1E;
-    border: 1px solid $text-color;
-    font-size: 30px;
-    font-weight: 400;
-    cursor: pointer;
-    background-color: #FFF;
-  }
-  .btn_petros:hover{
-    background-color: #93ab9d;
-    border: none; 
-    color: white;
-  }
-  .petros_box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .petros {
-    width: 629px;
-    height: 475px;
-    overflow: hidden;
-    border-radius: 20px 20px 100px 20px;
-  }
+#jh h1 {
+  font-size: 1.125rem;
+  color: $primary-color;
+  margin-bottom: 40px;
+}
 
-  .petros_wave{
-    width: 629px;
-    height: 475px;
-    overflow: hidden;
-    border-radius: 20px 20px 20px 100px;
-  }
-  
-  .petrossize {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  /* 텍스트 오른쪽 정렬 */
-  .text-box.text-end {
-    text-align: right;
-  }
-  
-  /* 텍스트 왼쪽 정렬 */
-  .text-box.text-start {
-    text-align: left;
-  }
-  
-  //하단 업체 슬라이드
+#jh h2 {
+  font-size: 1.875rem;
+  color: $text-color;
+  margin-bottom: 56px;
+}
+
+#jh p {
+  color: rgba($text-color, 0.7);
+  font-family: "Paperlogy 3 Light";
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
+.btn_petros{
+  margin-top:47px;
+  font-family: "Noto Sans KR";
+  width: 264px;
+  height: 67px;
+  color: #1E1E1E;
+  border: 1px solid $text-color;
+  font-size: 30px;
+  font-weight: 400;
+  cursor: pointer;
+  background-color: #FFF;
+}
+.btn_petros:hover{
+  background-color: #93ab9d;
+  border: none; 
+  color: white;
+}
+// .petros_box {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+
+
+// .petros_wave{
+//   width: 100%;
+//   padding-top: 75%;
+//   overflow: hidden;
+//   border-radius: 20px 20px 20px 100px;
+//   position: relative;
+// }
+.petros {
+  width: 100%;
+  padding-top: 75%;
+  overflow: hidden;
+  border-radius: 20px 20px 100px 20px;
+  position: relative;
+}
+
+.petros_wave{
+  width: 100%;
+  padding-top: 75%;
+  overflow: hidden;
+  border-radius: 20px 20px 20px 100px;
+  position: relative;
+}
+
+.petros img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 100px 20px;
+}
+.petros_wave img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 20px 100px;
+}
+
+.petrossize {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 텍스트 오른쪽 정렬 */
+.text-box.text-end {
+  text-align: right;
+}
+
+/* 텍스트 왼쪽 정렬 */
+.text-box.text-start {
+  text-align: left;
+}
+
+//하단 업체 슬라이드
 .partner_list {
-  padding: 60px 0;
+padding: 60px 0;
+
+.partner_marquee {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  margin: 30px 0;
+
+  div {
+    display: flex;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  &#partner_marquee1 div {
+    width: 7560px;
+    animation: partner_marquee1 45s linear infinite;
+    left: 0;
+  }
+
+  &#partner_marquee2 div {
+    width: 7560px;
+    animation: partner_marquee2 45s linear infinite;
+    right: 0;
+  }
+
+  span {
+    height: 100%;
+    width: 270px;
+    height: 220px;
+    position: relative;
+    display: block;
+  }
+
+  &#partner_marquee1 {
+    div {
+      
+      span:nth-of-type(14n - 13) {
+        background: url("http://da-bong.com/dabong/2024/img/partner/logo_01.png") no-repeat 50% 50%;
+        background-size: auto 100%;
+      }
+
+      span:nth-of-type(14n - 12) {
+        background: url("http://da-bong.com/dabong/2024/img/partner/logo_02.png") no-repeat 50% 50%;
+        background-size: auto 100%;
+      }
+
+      span:nth-of-type(14n - 11) {
+        background: url("http://da-bong.com/dabong/2024/img/partner/logo_03.png") no-repeat 50% 50%;
+        background-size: auto 100%;
+      }
+
+      span:nth-of-type(14n - 10) {
+        background: url("http://da-bong.com/dabong/2024/img/partner/logo_04.png") no-repeat 50% 50%;
+        background-size: auto 100%;
+      }
+
+      span:nth-of-type(14n - 9) {
+        background: url("http://da-bong.com/dabong/2024/img/partner/logo_05.png") no-repeat 50% 50%;
+        background-size: auto 100%;
+      }
+
+      span:nth-of-type(14n - 8) {
+        background: url("http://da-bong.com/dabong/2024/img/partner/logo_06.png") no-repeat 50% 50%;
+        background-size: auto 100%;
+      }
+
+      span:nth-of-type(14n - 7) {
+        background: url("http://da-bong.com/dabong/2024/img/partner/logo_07.png") no-repeat 50% 50%;
+        background-size: auto 100%;
+      }
+
+      span:nth-of-type(14n - 6) {
+        background: url("http://da-bong.com/dabong/2024/img/partner/logo_08.png") no-repeat 50% 50%;
+        background-size: auto 100%;
+      }
+
+      span:nth-of-type(14n - 5) {
+        background: url("http://da-bong.com/dabong/2024/img/partner/logo_09.png") no-repeat 50% 50%;
+        background-size: auto 100%;
+      }
+
+      span:nth-of-type(14n - 4) {
+        background: url("http://da-bong.com/dabong/2024/img/partner/logo_10.png") no-repeat 50% 50%;
+        background-size: auto 100%;
+      }
+
+      span:nth-of-type(14n - 3) {
+        background: url("http://da-bong.com/dabong/2024/img/partner/logo_11.png") no-repeat 50% 50%;
+        background-size: auto 100%;
+      }
+
+      span:nth-of-type(14n - 2) {
+        background: url("http://da-bong.com/dabong/2024/img/partner/logo_12.png") no-repeat 50% 50%;
+        background-size: auto 100%;
+      }
+
+      span:nth-of-type(14n - 1) {
+        background: url("http://da-bong.com/dabong/2024/img/partner/logo_13.png") no-repeat 50% 50%;
+        background-size: auto 100%;
+      }
+
+      span:nth-of-type(14n) {
+        background: url("http://da-bong.com/dabong/2024/img/partner/logo_14.png") no-repeat 50% 50%;
+        background-size: auto 100%;
+      }
+    }
+  }
+}
+
+@keyframes partner_marquee1 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -3780px;
+  }
+}
+
+@keyframes partner_marquee2 {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -3780px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  padding: 0 0 10vw;
 
   .partner_marquee {
-    width: 100%;
-    height: 220px;
-    overflow: hidden;
-    position: relative;
-    margin: 30px 0;
+    height: 176px;
 
-    div {
-      display: flex;
-      height: 100%;
-      position: absolute;
-      overflow: hidden;
-    }
-
-    &#partner_marquee1 div {
-      width: 7560px;
+    #partner_marquee1 div {
+      width: 6048px;
       animation: partner_marquee1 45s linear infinite;
       left: 0;
     }
 
-    &#partner_marquee2 div {
-      width: 7560px;
+    #partner_marquee2 div {
+      width: 6048px;
       animation: partner_marquee2 45s linear infinite;
       right: 0;
     }
 
-    span {
-      height: 100%;
-      width: 270px;
-      height: 220px;
-      position: relative;
-      display: block;
-    }
-
-    &#partner_marquee1 {
-      div {
-        
-        span:nth-of-type(14n - 13) {
-          background: url("http://da-bong.com/dabong/2024/img/partner/logo_01.png") no-repeat 50% 50%;
-          background-size: auto 100%;
-        }
-
-        span:nth-of-type(14n - 12) {
-          background: url("http://da-bong.com/dabong/2024/img/partner/logo_02.png") no-repeat 50% 50%;
-          background-size: auto 100%;
-        }
-
-        span:nth-of-type(14n - 11) {
-          background: url("http://da-bong.com/dabong/2024/img/partner/logo_03.png") no-repeat 50% 50%;
-          background-size: auto 100%;
-        }
-
-        span:nth-of-type(14n - 10) {
-          background: url("http://da-bong.com/dabong/2024/img/partner/logo_04.png") no-repeat 50% 50%;
-          background-size: auto 100%;
-        }
-
-        span:nth-of-type(14n - 9) {
-          background: url("http://da-bong.com/dabong/2024/img/partner/logo_05.png") no-repeat 50% 50%;
-          background-size: auto 100%;
-        }
-
-        span:nth-of-type(14n - 8) {
-          background: url("http://da-bong.com/dabong/2024/img/partner/logo_06.png") no-repeat 50% 50%;
-          background-size: auto 100%;
-        }
-
-        span:nth-of-type(14n - 7) {
-          background: url("http://da-bong.com/dabong/2024/img/partner/logo_07.png") no-repeat 50% 50%;
-          background-size: auto 100%;
-        }
-
-        span:nth-of-type(14n - 6) {
-          background: url("http://da-bong.com/dabong/2024/img/partner/logo_08.png") no-repeat 50% 50%;
-          background-size: auto 100%;
-        }
-
-        span:nth-of-type(14n - 5) {
-          background: url("http://da-bong.com/dabong/2024/img/partner/logo_09.png") no-repeat 50% 50%;
-          background-size: auto 100%;
-        }
-
-        span:nth-of-type(14n - 4) {
-          background: url("http://da-bong.com/dabong/2024/img/partner/logo_10.png") no-repeat 50% 50%;
-          background-size: auto 100%;
-        }
-
-        span:nth-of-type(14n - 3) {
-          background: url("http://da-bong.com/dabong/2024/img/partner/logo_11.png") no-repeat 50% 50%;
-          background-size: auto 100%;
-        }
-
-        span:nth-of-type(14n - 2) {
-          background: url("http://da-bong.com/dabong/2024/img/partner/logo_12.png") no-repeat 50% 50%;
-          background-size: auto 100%;
-        }
-
-        span:nth-of-type(14n - 1) {
-          background: url("http://da-bong.com/dabong/2024/img/partner/logo_13.png") no-repeat 50% 50%;
-          background-size: auto 100%;
-        }
-
-        span:nth-of-type(14n) {
-          background: url("http://da-bong.com/dabong/2024/img/partner/logo_14.png") no-repeat 50% 50%;
-          background-size: auto 100%;
-        }
-      }
+    #partner_marquee1 span,
+    #partner_marquee2 span {
+      width: 216px;
+      height: 176px;
     }
   }
 
@@ -350,7 +562,7 @@ $border-radius: 10px;
       left: 0;
     }
     100% {
-      left: -3780px;
+      left: -3024px;
     }
   }
 
@@ -359,93 +571,101 @@ $border-radius: 10px;
       right: 0;
     }
     100% {
-      right: -3780px;
-    }
-  }
-
-  @media screen and (max-width: 1024px) {
-    padding: 0 0 10vw;
-
-    .partner_marquee {
-      height: 176px;
-
-      #partner_marquee1 div {
-        width: 6048px;
-        animation: partner_marquee1 45s linear infinite;
-        left: 0;
-      }
-
-      #partner_marquee2 div {
-        width: 6048px;
-        animation: partner_marquee2 45s linear infinite;
-        right: 0;
-      }
-
-      #partner_marquee1 span,
-      #partner_marquee2 span {
-        width: 216px;
-        height: 176px;
-      }
-    }
-
-    @keyframes partner_marquee1 {
-      0% {
-        left: 0;
-      }
-      100% {
-        left: -3024px;
-      }
-    }
-
-    @keyframes partner_marquee2 {
-      0% {
-        right: 0;
-      }
-      100% {
-        right: -3024px;
-      }
-    }
-  }
-
-  @media screen and (max-width: 640px) {
-    .partner_marquee {
-      height: 132px;
-
-      &#partner_marquee1 div {
-        width: 4536px;
-        animation: partner_marquee1 45s linear infinite;
-        left: 0;
-      }
-
-      &#partner_marquee2 div {
-        width: 4536px;
-        animation: partner_marquee2 45s linear infinite;
-        right: 0;
-      }
-
-      &#partner_marquee1 span,
-      &#partner_marquee2 span {
-        width: 162px;
-        height: 132px;
-      }
-    }
-
-    @keyframes partner_marquee1 {
-      0% {
-        left: 0;
-      }
-      100% {
-        left: -2268px;
-      }
-    }
-
-    @keyframes partner_marquee2 {
-      0% {
-        right: 0;
-      }
-      100% {
-        right: -2268px;
-      }
+      right: -3024px;
     }
   }
 }
+
+@media screen and (max-width: 640px) {
+  .partner_marquee {
+    height: 132px;
+
+    &#partner_marquee1 div {
+      width: 4536px;
+      animation: partner_marquee1 45s linear infinite;
+      left: 0;
+    }
+
+    &#partner_marquee2 div {
+      width: 4536px;
+      animation: partner_marquee2 45s linear infinite;
+      right: 0;
+    }
+
+    &#partner_marquee1 span,
+    &#partner_marquee2 span {
+      width: 162px;
+      height: 132px;
+    }
+  }
+
+  @keyframes partner_marquee1 {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -2268px;
+    }
+  }
+
+  @keyframes partner_marquee2 {
+    0% {
+      right: 0;
+    }
+    100% {
+      right: -2268px;
+    }
+  }
+}
+}
+
+//반응형
+//로고 위치
+@media (max-width: 320px) {
+.logo-container {
+  align-self: flex-start;
+  margin-top: 0;
+}
+}
+@media (min-width: 320px) {
+.logo-container {
+  align-self: center;
+}
+}
+@media (max-width: 320px) {
+.logo {
+  width: 50px;
+  
+}
+}
+
+//상단 bar 메뉴
+@media (max-width: 320px){
+.d1ul {
+  flex-wrap: wrap; /* 작은 화면에서는 메뉴가 두 줄로 나올 수 있게 */
+  gap: 8px;
+}
+
+.d1a {
+  font-size: 14px;
+  gap: 0;
+}
+}
+
+// 예약하기 및 지점위치 
+@media (max-width: 320px) {
+.reservation
+ {
+  align-self: flex-start;
+  justify-self: flex-end;
+  margin-top: 0;
+}
+}
+@media (min-width: 320px) {
+.reservation {
+  align-self: center;
+}
+}
+
+
+
