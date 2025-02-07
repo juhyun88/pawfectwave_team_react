@@ -2,8 +2,6 @@
 @media (max-width: 320px) {
   #hd .logo_container {
     order: 0;
-    margin-left: 20px;
-    margin-top: -50px;
     width: 32px;
     height: 31px;
   }
@@ -19,7 +17,23 @@
 @media (max-width: 320px) {
   #hd .reservation {
     order: 1;
+    margin-top: 30px;
+    margin-right: 40px;
   }
+}
+#hd .hamburger-menu {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 15px;
+}
+#hd .hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: black; /* 햄버거 메뉴가 잘 보이도록 색상 설정 */
+  transition: 0.3s ease;
 }
 #hd .d1ul {
   list-style: none;
@@ -82,7 +96,6 @@
 }
 @media (max-width: 320px) {
   .here {
-    margin-top: 10px;
     margin-right: 0px;
     width: 3rem;
   }
@@ -239,23 +252,41 @@
   color: white;
 }
 
-.petros_box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .petros {
-  width: 629px;
-  height: 475px;
+  width: 100%;
+  padding-top: 75%;
   overflow: hidden;
   border-radius: 20px 20px 100px 20px;
+  position: relative;
 }
 
 .petros_wave {
-  width: 629px;
-  height: 475px;
+  width: 100%;
+  padding-top: 75%;
   overflow: hidden;
+  border-radius: 20px 20px 20px 100px;
+  position: relative;
+}
+
+.petros img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 100px 20px;
+}
+
+.petros_wave img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 20px 20px 20px 100px;
 }
 
