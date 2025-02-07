@@ -45,14 +45,16 @@
     <link rel="stylesheet" href="./css/hyuna.min.css">
     <link rel="stylesheet" href="./css/juhyun.min.css">
   
+    <!-- 커스텀 자바스크립트 -->
+     <script src="./js/common.js"></script>
   
   
 
 </head>
 <body class="overflow-x-hidden">
-    <header id="hd" >
+    <header id="hd" class="py-4 fixed-top">
       <div class="container d-flex justify-content-between align-items-center flex-wrap">
-        <h1 class="order-0">
+        <h1 class="order-0 mb-0 ">
           <a href="" class="logo_container" ><img src="./img/svg/logo.svg" alt="" class="logo "></a>
         </h1>
 
@@ -62,51 +64,63 @@
           <span></span>
         </div>
         
-        <div class="topmeun d-flex justify-content-center align-items-center order-1">
+        <div class="topmeun d-flex justify-content-center align-items-center order-1 me-auto ms-5">
           <ul class="d1ul">
             <li class="d1li position-relative text-center"> 
               <a href="" class="d1a d-flex justify-content-start align-items-center">장례절차</a>
                 <ul class="d2ul position-absolute text-white p-0 m-0 start-50 translate-middle-x">
-                  <li class="d2li">스톤 장례</li>
-                  <li class="d2li">일반 장례</li>
+                  <li class="d2li">
+                    <a>스톤 장례</a></li>
+                  <li class="d2li">
+                    <a>일반 장례</a></li>
                 </ul>
             </li>
             <li class="d1li position-relative text-center"> 
               <a href="" class="d1a d-flex justify-content-center align-items-center">장례비용</a>
                 <ul class="d2ul position-absolute text-white p-0 m-0 start-50 translate-middle-x">
-                  <li class="d2li">스톤 장례</li>
-                  <li class="d2li">일반 장례</li>
+                  <li class="d2li">
+                    <a>스톤 장례</a></li>
+                  <li class="d2li">
+                    <a>일반 장례</a></li>
                 </ul>
             </li>
             <li class="d1li position-relative text-center"> 
               <a href="" class="d1a d-flex justify-content-center align-items-center">지점안내</a>
                 <ul class="d2ul position-absolute text-white p-0 m-0 start-50 translate-middle-x">
-                  <li class="d2li">지점 및 시설</li>
-                  <li class="d2li">오시는길</li>
+                  <li class="d2li">
+                    <a>지점 및 시설</a></li>
+                  <li class="d2li">
+                    <a>오시는길</a></li>
                 </ul>
             </li>
             <li class="d1li position-relative text-center"> 
               <a href="" class="d1a d-flex justify-content-center align-items-center">부가서비스</a>
                 <ul class="d2ul position-absolute text-white p-0 m-0 start-50 translate-middle-x">
-                  <li class="d2li">운구서비스</li>
-                  <li class="d2li">비동행<br>장례서비스</li>
-                  <li class="d2li">봉안당</li>
-                  <li class="d2li">산골</li>
+                  <li class="d2li">
+                    <a>운구서비스</a></li>
+                  <li class="d2li">
+                    <a>비동행<br>장례서비스</a></li>
+                  <li class="d2li">
+                    <a>봉안당</a></li>
+                  <li class="d2li">
+                    <a>산골</a></li>
                 </ul>
             </li>
             <li class="d1li position-relative text-center"> 
               <a href="" class="d1a d-flex justify-content-center align-items-center">고객지원센터</a>
                 <ul class="d2ul position-absolute text-white p-0 m-0 start-50 translate-middle-x">
-                  <li class="d2li">펫로스케어</li>
-                  <li class="d2li">파우펙트&펫<br>협력병원</li>
+                  <li class="d2li">
+                    <a>펫로스케어</a></li>
+                  <li class="d2li">
+                    <a>파우펙트&펫<br>협력병원</a></li>
                 </ul>
             </li>
           </ul>
         </div>
 
-        <ul class="reservation d-flex justify-content-end align-items-center order-2">
+        <ul class="reservation d-flex justify-content-end align-items-center order-2 ">
           <li><a href=""><img src="./img/svg/here.svg" alt="" class="here"></a></li>
-          <li><a href=""><button class="reservation-button"><img src="./img/svg/calendar.svg" alt="">
+          <li class="text-nowrap"><a href=""><button class="reservation-button"><img src="./img/svg/calendar.svg" alt="">
             <span>장례 예약</span></button></a>
           </li>
         </ul>
@@ -116,7 +130,7 @@
     
 
     
-    <div class="swiper-container">
+    <div class="swiper-container pt-5 mt-5" id="jy_swiper">
       <div class="swiper overflow-visible container mt-5" id="mainSlider">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
