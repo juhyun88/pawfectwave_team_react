@@ -163,50 +163,52 @@
 
 
 
-   .here{
-    margin-right: 22.37px;
-    width: 26.013px;
-    height: 26.013px;
-    @media (max-width:320px){
-      margin-right: 0px;
-      width: 3rem;
-    }
-   }
-  .reservation-button {
-    background-color: $primary-color;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    padding: 8px 15px;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    @media (max-width:768px) {
-      span {display:none;}
-      width:3rem;
-      
-    }
+
+}
+
+.here{
+  margin-right: 22.37px;
+  width: 26.013px;
+  height: 26.013px;
+  @media (max-width:320px){
+    margin-right: 0px;
+    width: 3rem;
   }
-  .navbar-toggler {
-    border: none;
-    background: transparent;
-    font-size: 1.5rem;
-  
-    &:focus {
-      outline: none;
-    }
+ }
+.reservation-button {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  @media (max-width:768px) {
+    span {display:none;}
+    width:3rem;
+    
   }
-  
-  .collapse {
-    display: none;
-  
-    &.show {
-      display: block;
-    }
+}
+.navbar-toggler {
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.collapse {
+  display: none;
+
+  &.show {
+    display: block;
   }
 }
 }
