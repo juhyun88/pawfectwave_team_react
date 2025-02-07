@@ -116,18 +116,21 @@
   font-size: 16px;
   line-height: 2;
 }
-#hd .here {
+#hd .d1ul a:hover {
+  color: #006838 !important;
+}
+#hd .d1ul .here {
   margin-right: 22.37px;
   width: 26.013px;
   height: 26.013px;
 }
 @media (max-width: 320px) {
-  #hd .here {
+  #hd .d1ul .here {
     margin-right: 0px;
     width: 3rem;
   }
 }
-#hd .reservation-button {
+#hd .d1ul .reservation-button {
   background-color: #006838;
   color: white;
   border: none;
@@ -142,25 +145,25 @@
   gap: 5px;
 }
 @media (max-width: 768px) {
-  #hd .reservation-button {
+  #hd .d1ul .reservation-button {
     width: 3rem;
   }
-  #hd .reservation-button span {
+  #hd .d1ul .reservation-button span {
     display: none;
   }
 }
-#hd .navbar-toggler {
+#hd .d1ul .navbar-toggler {
   border: none;
   background: transparent;
   font-size: 1.5rem;
 }
-#hd .navbar-toggler:focus {
+#hd .d1ul .navbar-toggler:focus {
   outline: none;
 }
-#hd .collapse {
+#hd .d1ul .collapse {
   display: none;
 }
-#hd .collapse.show {
+#hd .d1ul .collapse.show {
   display: block;
 }
 
