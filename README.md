@@ -32,15 +32,22 @@ node 20.18.0
 
 ## 06.브랜드소개
 + [로고](#로고)
-+ #아이콘
-+ #폰트
-+ #컬러
-+ #프레젠테이션
++ [폰트](#폰트)
++ [컬러](#컬러)
++ [프레젠테이션](#프레젠테이션)
 
 ### 로고
 | Version      | Preview |
 |-----------|------|
 | Default    |![기본로고](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/logo.svg)| 
 | Horizontal |![한글로고](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/logo_horizontal.svg)|
-| Vertical   |![세로로고](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/logo.svg)|
+| Vertical   |![세로로고](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/vertical_logo.svg)|
+
+### 폰트
+| Font      | Link |
+|-----------|------|
+|Noto Sans KR  Rehular|[폰트사이트이동](https://fonts.google.com/noto/specimen/Noto+Sans+KR?lang=ko_Kore)| 
+|Paperlogy Rehular|[폰트사이트이동](https://noonnu.cc/font_page/1456)|
+|온글잎 콘콘체|[폰트사이트이동](https://noonnu.cc/font_page/1546)|
+
 
