@@ -1,4 +1,4 @@
-![메인로고](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/icon/icon.jpg)
+![메인로고](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/icon/%EC%95%84%EC%9D%B4%EC%BD%982.svg)
 
 ## 00.프로젝트개요
 
