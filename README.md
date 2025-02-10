@@ -40,7 +40,7 @@ node 20.18.0
 ### 로고
 | Version      | Preview |
 |-----------|------|
-| Default    |    | 
-| Horizontal |    |
-| Vertical   |    |
+| Default    |![기본로고](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/logo.svg)| 
+| Horizontal |![한글로고](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/logo.svg)|
+| Vertical   |![세로로고](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/logo.svg)|
 
