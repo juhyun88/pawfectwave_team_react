@@ -34,6 +34,7 @@
   /* 중앙에 텍스트 */
   /* Lottie 애니메이션 컨테이너 */
   /* Lottie 애니메이션 컨테이너 */
+  /*추억 애니메이션*/
   /* 손 애니메이션 */
   /* 손 애니메이션 반응형 */
 }
@@ -69,7 +70,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px; /* 아래쪽 간격 */
+  margin-bottom: 40px;
 }
 #ehwave_love .right {
   display: none !important;
@@ -114,6 +115,20 @@
 }
 #ehwave_love .love-text .Memories-text {
   text-align: center;
+}
+#ehwave_love .Memories-container svg {
+  animation: mo 2s infinite alternate;
+}
+@keyframes mo {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5); /* Scale up */
+  }
+  100% {
+    transform: scale(1); /* Scale back */
+  }
 }
 @media (max-width: 480px) {
   #ehwave_love .Memories-container {
