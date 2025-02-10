@@ -21,7 +21,7 @@ React를 이용하여 현대적이고 직관적인 UI구축을 통해 UX 개선�
 ![팀소개](https://raw.githubusercontent.com/juhyun88/pawfectwave_team_react/bc2b61a818cc001d56c96675f0d0e56f49369974/Group%2018.svg)
 
 ## 03.개발 환경
-node 20.18.0
+
 
 ## 04.설계
 디자인을 토대로 컴포넌트 관계도와 정보구조도 Figjam에서 작성
@@ -54,6 +54,6 @@ node 20.18.0
 | 메인컬러      | 색상코드 |
 |-----------|------|
 |PFW Green|![메인컬러](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/maincolor.svg) #006838| 
-|PFW Green|![메인밝은컬러](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/maincolor.svg) #006838|
-|온글잎 콘콘체|[폰트사이트이동](https://noonnu.cc/font_page/1546)|
+|PFW Green|![메인밝은컬러](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/lightbrown2.svg) #93AB9D|
+|PFW Brown|![메인브라운컬러](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/lightbrown2.svg) #93AB9D|
 
