@@ -120,3 +120,47 @@
   font-style: normal;
   line-height: normal;
 }
+
+.basicfonttda {
+  color: #000000;
+  font-size: min(1rem, 3vw);
+  font-style: normal;
+  line-height: normal;
+}
+
+#ehwave_banner1 .ehcontent {
+  height: min(471px, 51vw);
+}
+#ehwave_banner1 .ehcontentBanner1 {
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(/img/banner/banner_1.jpg) no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+}
+@media (max-width: 1024px) {
+  #ehwave_banner1 .ehcontentBanner1 {
+    background-position: 15% center;
+    margin-bottom: 0;
+    font-family: "Paperlogy 4 Regular";
+  }
+}
+#ehwave_banner1 .ehcontentBanner2 {
+  background: url(/img/banner/banner_2.jpg) no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+@media (max-width: 1024px) {
+  #ehwave_banner1 .ehcontentBanner2 {
+    background-position: 70% center;
+    background-size: auto 100%;
+    margin-bottom: 0;
+    font-family: "Paperlogy 4 Regular";
+  }
+}
+#ehwave_banner1 .sy_Banner2p {
+  margin-left: 8rem;
+  margin-bottom: 0;
+}
+#ehwave_banner1 .sy_Banner1p {
+  margin-right: 3rem;
+  margin-bottom: 0;
+}
