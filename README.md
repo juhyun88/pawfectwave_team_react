@@ -18,4 +18,29 @@ React를 이용하여 현대적이고 직관적인 UI구축을 통해 UX 개선�
 + 펫 병원과의 콜라보로 연계 사이트 제작
 
 ## 02.팀 소개
-![팀소개]()
+![팀소개](https://raw.githubusercontent.com/juhyun88/pawfectwave_team_react/bc2b61a818cc001d56c96675f0d0e56f49369974/Group%2018.svg)
+
+## 03.개발 환경
+node 20.18.0
+
+## 04.설계
+디자인을 토대로 컴포넌트 관계도와 정보구조도 Figjam에서 작성
+
+## 05.개발워크플로우
++ Branch 전략
+업무 분담과 효율적인 개발을 위해 개별 브랜치에서 기능 개발 등 작업
+
+## 06.브랜드소개
++ [로고](#로고)
++ #아이콘
++ #폰트
++ #컬러
++ #프레젠테이션
+
+### 로고
+| Version      | Preview |
+|-----------|------|
+| Default    |    | 
+| Horizontal |    |
+| Vertical   |    |
+
