@@ -53,7 +53,7 @@ node 20.18.0
 ### 컬러
 | 메인컬러      | 색상코드 |
 |-----------|------|
-|파우펙트웨이브|#| 
-|Paperlogy Rehular|[폰트사이트이동](https://noonnu.cc/font_page/1456)|
+|PFW Green|(https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/logo.svg)[#006838]| 
+|PFW Green||
 |온글잎 콘콘체|[폰트사이트이동](https://noonnu.cc/font_page/1546)|
 
