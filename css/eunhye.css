@@ -14,7 +14,7 @@
   z-index: 1;
 }
 #eh_quick.quick_Menu a {
-  background-color: #006838;
+  background-color: #fff;
   width: 40px;
   height: 40px;
   border-radius: 20px;
@@ -36,6 +36,15 @@
   /* Lottie 애니메이션 컨테이너 */
   /* 손 애니메이션 */
   /* 손 애니메이션 반응형 */
+  /*추억 애니메이션*/
+  /*띠배너 시작 */
+  /* 전체 배너 컨테이너 */
+  /* 개별 배너 스타일 */
+  /* 전체 이미지와 텍스트 컨테이너 설정 */
+  /* 첫 번째 이미지 크기 설정 */
+  /* 두 번째 이미지 크기 설정 */
+  /* 텍스트 컨테이너 */
+  /* 두 번째 배너 텍스트 컨테이너 */
 }
 #ehwave_love .left,
 #ehwave_love .right,
@@ -69,7 +78,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px; /* 아래쪽 간격 */
+  margin-bottom: 40px;
 }
 #ehwave_love .right {
   display: none !important;
@@ -99,12 +108,14 @@
 }
 #ehwave_love .Memories-container {
   position: absolute;
-  top: -20%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 900px;
-  height: 900px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
+  animation-name: memoryani;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 #ehwave_love dotlottie-wc {
   width: 100%;
@@ -183,22 +194,30 @@
     animation: handMovement 5s ease-in-out infinite;
   }
 }
-
-/*띠배너 시작 */
-/* 전체 배너 컨테이너 */
-.banner-container {
+#ehwave_love .Memories-container svg.mo {
+  animation: scaleAnimation 5s infinite alternate;
+}
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#ehwave_love .banner-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 140px;
 }
-
-.hand-animation {
+#ehwave_love .hand-animation {
   width: 180px;
 }
-
-/* 개별 배너 스타일 */
-.ehcontent {
+#ehwave_love .ehcontent {
   position: relative;
   width: 1922px;
   height: 472px;
@@ -207,14 +226,11 @@
   justify-content: center;
   align-items: center;
 }
-
-.ehcontent img {
+#ehwave_love .ehcontent img {
   width: 100%;
   height: auto;
 }
-
-/* 전체 이미지와 텍스트 컨테이너 설정 */
-.ehcontent, .ehcontent1 {
+#ehwave_love .ehcontent, #ehwave_love .ehcontent1 {
   position: relative;
   width: 100%;
   margin-bottom: 60px;
@@ -223,25 +239,19 @@
   align-items: center;
   justify-content: center;
 }
-
-/* 첫 번째 이미지 크기 설정 */
-.ehcontent img {
+#ehwave_love .ehcontent img {
   width: 100%;
   height: auto;
   max-width: 1922px;
   max-height: 472px;
 }
-
-/* 두 번째 이미지 크기 설정 */
-.ehcontent1 img {
+#ehwave_love .ehcontent1 img {
   width: 100%;
   height: auto;
   max-width: 1922px;
   max-height: 528px;
 }
-
-/* 텍스트 컨테이너 */
-.text-container {
+#ehwave_love .text-container {
   position: absolute;
   bottom: 30px;
   left: 70%;
@@ -252,28 +262,23 @@
   padding: 10px;
   box-sizing: border-box;
 }
-
-.text-small {
+#ehwave_love .text-small {
   font-size: 18px !important;
   margin-top: 5;
   margin-bottom: 3px;
   line-height: 1.4;
 }
-
-.text-large {
+#ehwave_love .text-large {
   font-size: 30px !important;
   margin-top: 0;
   margin-bottom: 5px;
   line-height: 1.3;
 }
-
-/* 두 번째 배너 텍스트 컨테이너 */
-.ehcontent1 {
+#ehwave_love .ehcontent1 {
   position: relative;
   width: 100%;
 }
-
-.banner-text-container {
+#ehwave_love .banner-text-container {
   position: absolute;
   bottom: 90px;
   left: 10%;
@@ -284,21 +289,29 @@
   padding: 10px;
   box-sizing: border-box;
 }
-
-.text-large {
+#ehwave_love .text-large {
   font-size: 30px;
   margin-bottom: 80px;
   line-height: 1.5;
 }
-
-.text-small {
+#ehwave_love .text-small {
   font-size: 18px;
   margin-bottom: 15px;
   line-height: 1.6;
 }
-
 @media (max-width: 1200px) {
-  #ehwave_love .right p {
+  #ehwave_love #ehwave_love .right p {
     font-size: min(30px, 2.2vw);
+  }
+}
+@keyframes memoryani {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
   }
 }
