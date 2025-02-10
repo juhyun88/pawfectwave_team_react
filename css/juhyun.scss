@@ -62,7 +62,7 @@
   }
   .topmeun{
     margin-left: 3rem;
-    overflow: hidden;
+
     &.wide{
       left: 0;
     }
@@ -108,13 +108,13 @@
         position: absolute;
         top:100%;
         left:0; width:100%;
-        background-color: #d0dbd580;
+        background-color: #d0dbd5e3;
         height: 0;
         transition: 0.5s;
 
       }
       a{
-        color:rgb(153, 148, 148);
+        color:rgb(14, 13, 13);
         &:hover{
             font-weight: 600;
           }

@@ -39,7 +39,6 @@
 }
 #hd .topmeun {
   margin-left: 3rem;
-  overflow: hidden;
 }
 #hd .topmeun.wide {
   left: 0;
@@ -84,12 +83,12 @@
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: rgba(208, 219, 213, 0.5019607843);
+  background-color: rgba(208, 219, 213, 0.8901960784);
   height: 0;
   transition: 0.5s;
 }
 #hd .topmeun .d1ul a {
-  color: rgb(153, 148, 148);
+  color: rgb(14, 13, 13);
 }
 #hd .topmeun .d1ul a:hover {
   font-weight: 600;
