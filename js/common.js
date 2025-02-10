@@ -1,3 +1,6 @@
+// const mystudy = "리액트";
+// document.body.innerHTML = "<h1>"+mystudy+"</h1>";
+
 document.addEventListener('DOMContentLoaded', () => {
     let lastScrollY = 0;
     let isScrolling;
@@ -27,12 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const mbtn = document.querySelector(".hamburger-menu");
-    const widemenu = document.querySelector(".topmenu");
+    const widemenu = document.querySelector(".topmeun");
+
+    const moclose = document.querySelector("#hd .topmeun .closebtn")
     
     mbtn.addEventListener('click', function(){
       widemenu.classList.add("wide");
     })
-    
+    moclose.addEventListener('click', function(){
+      widemenu.classList.remove("wide");
+    })
 
 
   });

@@ -57,6 +57,7 @@
     background-color: white;
     left: 100%;
     transition: 0.5s;
+    width: 100vw;
     right: 0;
     top: 0;
   }
@@ -93,11 +94,13 @@
 #hd .topmeun .d1ul a:hover {
   font-weight: 600;
 }
-#hd .topmeun .d1ul:hover:before {
-  height: 280px;
-}
-#hd .topmeun .d1ul:hover .d2ul {
-  height: 280px !important;
+@media (min-width: 1024px) {
+  #hd .topmeun .d1ul:hover:before {
+    height: 280px;
+  }
+  #hd .topmeun .d1ul:hover .d2ul {
+    height: 280px !important;
+  }
 }
 #hd .topmeun .d1ul .d1li {
   display: inline-block;
