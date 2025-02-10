@@ -1,29 +1,19 @@
 #ft {
   background-color: #E8E3E3;
-}
-#ft .d-flex {
-  display: flex;
-}
-#ft .jcc {
-  justify-content: center;
-}
-#ft .jcb {
-  justify-content: space-between;
+  font-family: "Paperlogy 4 Regular";
+  word-break: keep-all;
 }
 #ft .container .info_box {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #ccc;
 }
 #ft .container .info_box p {
-  font-weight: 400;
   line-height: 1.5;
-  font-family: "Paperlogy 4 Regular";
 }
 #ft .container h2 {
-  color: #000;
+  color: var(--basic-text-color);
   font-size: 44px;
-  font-weight: 700;
-  font-family: "Paperlogy 7 Bold";
   margin-bottom: 1.4rem;
+  font-family: "Paperlogy 5 Medium";
 }
 @media (max-width: 991px) {
   #ft .container h2 {
@@ -31,9 +21,8 @@
   }
 }
 #ft .container p {
-  color: #000;
-  font-size: 19px;
-  font-family: "Paperlogy 4 Regular";
+  color: var(--basic-text-color);
+  font-size: 15px;
 }
 @media (max-width: 991px) {
   #ft .container p {
@@ -41,16 +30,23 @@
   }
 }
 #ft .container p.call {
-  color: #006838;
+  color: var(--Primery);
   font-family: "Paperlogy 5 Medium";
-  font-weight: 500;
   margin-bottom: 1.4rem;
+  font-size: 22px;
 }
 #ft .container .info {
   margin-bottom: 1.38rem;
+  font-size: 14px;
 }
 #ft .container .social_icons {
   gap: 11px;
+}
+#ft .container .social_icons .youtube img {
+  height: 22px;
+}
+#ft .container .social_icons img {
+  height: 26px;
 }
 @media (max-width: 991px) {
   #ft .container .social_icons img {
@@ -58,9 +54,8 @@
   }
 }
 #ft .container .footer_copy {
-  gap: 135px;
   margin-top: 1.38rem;
-  align-items: center;
+  justify-content: space-between;
 }
 @media (max-width: 991px) {
   #ft .container .footer_copy {
@@ -68,9 +63,8 @@
   }
 }
 #ft .container .footer_copy a {
-  font-family: "Paperlogy 4 Regular";
   text-decoration: none;
-  color: #000;
+  color: var(--basic-text-color);
 }
 @media (max-width: 991px) {
   #ft .container .footer_copy a {
