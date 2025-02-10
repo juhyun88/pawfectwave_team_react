@@ -54,6 +54,8 @@ React를 이용하여 현대적이고 직관적인 UI구축을 통해 UX 개선�
 | 메인컬러      | 색상코드 |
 |-----------|------|
 |PFW Green|![메인컬러](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/maincolor.svg) #006838| 
-|PFW Green|![메인밝은컬러](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/lightbrown2.svg) #93AB9D|
-|PFW Brown|![메인브라운컬러](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/lightbrown2.svg) #93AB9D|
+|PFW Green|![메인밝은컬러](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/lightcolor.svg) #93AB9D|
+|PFW Brown|![메인브라운컬러1](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/lightbrown2.svg) ##C2B3A3|
+|PFW Brown|![메인브라운컬러2](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/lightbrown2.svg) #A97D5E|
+|PFW Brown|![메인브라운컬러3](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/lightbrown2.svg) #754B42|
 
