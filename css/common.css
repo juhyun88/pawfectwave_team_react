@@ -55,6 +55,12 @@
 :root{
   --MainBrownLight : #A97D5E;
   --Primery : #006838;
+  --light-color: #93ab9d;
+  --text-color: #1E1E1E;
+  --highlight-color: #007bff;
+  --border-radius: 10px;
+  --basic-text-color : #000
+
 }
 body{
   font-family: "Paperlogy 3 Light";

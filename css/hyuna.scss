@@ -1,70 +1,77 @@
+
+// "Paperlogy 1 Thin"
+// "Paperlogy 2 ExtraLight"
+// "Paperlogy 3 Light"
+// "Paperlogy 4 Regular"
+// "Paperlogy 5 Medium"
+// "Paperlogy 6 SemiBold"
+// "Paperlogy 7 Bold"
+
 #ft{
-  .d-flex {
-    display: flex;
-  }
-  .jcc {
-    justify-content: center;
-  }
-  .jcb {
-    justify-content: space-between;
-  }
-  // height: 350px;
   background-color: #E8E3E3;
+  font-family: "Paperlogy 4 Regular";
+  word-break: keep-all;
   .container{
     .info_box {
-      border-bottom: 1px solid #000;
+      border-bottom: 1px solid #ccc;
       p {
-        font-weight: 400;
         line-height: 1.5;
-        font-family: "Paperlogy 4 Regular";
+        
       }
     }
     h2{
-      color: #000;
-      font-size: 44px;
-      font-weight: 700;
-      font-family: "Paperlogy 7 Bold";
+      color: var(--basic-text-color);
+      font-size: 44px;      
       margin-bottom: 1.4rem;
+      font-family: "Paperlogy 5 Medium";
       @media (max-width:991px){
         font-size: 24px;
       }
     }
     p{
-      color: #000;
-      font-size: 19px;
-      font-family: "Paperlogy 4 Regular";
+      color: var(--basic-text-color);
+      font-size: 15px;
+     
       @media (max-width:991px){
         font-size: 12px;
       }
     }
     p.call {
-      color: #006838;
+      color: var(--Primery);
       font-family: "Paperlogy 5 Medium";
-      font-weight: 500;
       margin-bottom: 1.4rem;
+      font-size: 22px;
     }
     .info {
       margin-bottom: 1.38rem;
+      font-size: 14px;
     }
     .social_icons {
       gap: 11px;
+      .youtube{
+        img{
+          height: 22px;
+        }
+      }
       img {
+        height: 26px;
         @media (max-width:991px){
           height: 20px;
         }
       }
     }
     .footer_copy {
-      gap: 135px;
+      // gap: 135px;
       margin-top: 1.38rem;
-      align-items: center;
+      // align-items: center;
+      justify-content: space-between;
       @media (max-width:991px) {
         gap: 0;
       }
       a {
-        font-family: "Paperlogy 4 Regular";
+       
         text-decoration: none;
-        color: #000;
+        color: var(--basic-text-color);
         @media (max-width:991px){
           font-size: 12px;
         }
