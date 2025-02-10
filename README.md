@@ -50,4 +50,10 @@ node 20.18.0
 |Paperlogy Rehular|[폰트사이트이동](https://noonnu.cc/font_page/1456)|
 |온글잎 콘콘체|[폰트사이트이동](https://noonnu.cc/font_page/1546)|
 
+### 컬러
+| 메인컬러      | 색상코드 |
+|-----------|------|
+|파우펙트웨이브|#| 
+|Paperlogy Rehular|[폰트사이트이동](https://noonnu.cc/font_page/1456)|
+|온글잎 콘콘체|[폰트사이트이동](https://noonnu.cc/font_page/1546)|
 
