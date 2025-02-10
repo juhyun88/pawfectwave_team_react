@@ -57,5 +57,8 @@ React를 이용하여 현대적이고 직관적인 UI구축을 통해 UX 개선�
 |PFW Green|![메인밝은컬러](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/lightcolor.svg) #93AB9D|
 |PFW Brown|![메인브라운컬러1](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/lightbrown1.svg) ##C2B3A3|
 |PFW Brown|![메인브라운컬러2](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/lightbrown2.svg) #A97D5E|
-|PFW Brown|![메인브라운컬러3](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/lightbrown2.svg) #754B42|
+|PFW Brown|![메인브라운컬러3](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/lightbrown3.svg) #754B42|
+
+### 프레젠테이션
+
 
