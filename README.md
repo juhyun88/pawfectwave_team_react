@@ -18,7 +18,18 @@ React를 이용하여 현대적이고 직관적인 UI구축을 통해 UX 개선�
 + 펫 병원과의 콜라보로 연계 사이트 제작
 
 ## 02.팀 소개
+
+<div style="display: flex; justify-content: space-between;">
+  <span>branch -eunhye</span>
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;branch -juhyun</span>
+
 ![팀소개](https://raw.githubusercontent.com/juhyun88/pawfectwave_team_react/bc2b61a818cc001d56c96675f0d0e56f49369974/Group%2018.svg)
+<div style="display: flex; justify-content: space-between;">
+  <span>branch -soyeong</span>
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;branch -hyuna</span>
+</div>
+</div>
+
 
 ## 03.개발 환경
 
