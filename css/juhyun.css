@@ -153,6 +153,9 @@
   font-size: 16px;
   line-height: 2;
 }
+#hd .topmeun .d1ul .d1li .d2ul .d2li a {
+  text-decoration: none;
+}
 @media (max-width: 1024px) {
   #hd .topmeun .d1ul .d1li .d2ul {
     position: relative !important;
@@ -162,6 +165,10 @@
   #hd .topmeun .d1ul .d1li .d2ul.over {
     max-height: 200px;
   }
+}
+#hd .topmeun .d1ul .d1li .d2ul.over {
+  max-height: 300px; /* 필요에 따라 높이를 조정 */
+  overflow: hidden;
 }
 #hd .topmeun .d1ul a:hover {
   color: #006838 !important;
@@ -256,8 +263,8 @@
 #jy_swiper.swiper-container .swiper-slide img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   opacity: 0.5;
   border-radius: 20px;
   transition: transform 0.5s ease, opacity 0.5s ease;
@@ -360,8 +367,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 20px 20px 100px 20px;
 }
 
@@ -371,16 +378,16 @@
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 20px 20px 20px 100px;
 }
 
 .petrossize {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /* 텍스트 오른쪽 정렬 */
@@ -426,61 +433,65 @@
   position: relative;
   display: block;
 }
+.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 14) {
+  background: url("http://petforest.co.kr/wp-content/themes/petforest/images/pt_logo_07_w.png") no-repeat 50% 50%;
+  background-size: contain;
+}
 .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 13) {
-  background: url("http://da-bong.com/dabong/2024/img/partner/logo_01.png") no-repeat 50% 50%;
-  background-size: auto 100%;
+  background: url("http://petforest.co.kr/wp-content/themes/petforest/images/pt_logo_01_w.png") no-repeat 50% 50%;
+  background-size: contain;
 }
 .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 12) {
-  background: url("http://da-bong.com/dabong/2024/img/partner/logo_02.png") no-repeat 50% 50%;
-  background-size: auto 100%;
+  background: url("http://petforest.co.kr/wp-content/themes/petforest/images/pt_logo_02_w.png") no-repeat 50% 50%;
+  background-size: contain;
 }
 .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 11) {
-  background: url("http://da-bong.com/dabong/2024/img/partner/logo_03.png") no-repeat 50% 50%;
-  background-size: auto 100%;
+  background: url("http://petforest.co.kr/wp-content/themes/petforest/images/pt_logo_03_w.png") no-repeat 50% 50%;
+  background-size: contain;
 }
 .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 10) {
-  background: url("http://da-bong.com/dabong/2024/img/partner/logo_04.png") no-repeat 50% 50%;
-  background-size: auto 100%;
+  background: url("http://petforest.co.kr/wp-content/themes/petforest/images/pt_logo_04_w.png") no-repeat 50% 50%;
+  background-size: contain;
 }
 .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 9) {
-  background: url("http://da-bong.com/dabong/2024/img/partner/logo_05.png") no-repeat 50% 50%;
-  background-size: auto 100%;
+  background: url("http://petforest.co.kr/wp-content/themes/petforest/images/pt_logo_05_w.png") no-repeat 50% 50%;
+  background-size: contain;
 }
 .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 8) {
-  background: url("http://da-bong.com/dabong/2024/img/partner/logo_06.png") no-repeat 50% 50%;
-  background-size: auto 100%;
+  background: url("http://petforest.co.kr/wp-content/themes/petforest/images/pt_logo_08_w.png") no-repeat 50% 50%;
+  background-size: contain;
 }
 .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 7) {
-  background: url("http://da-bong.com/dabong/2024/img/partner/logo_07.png") no-repeat 50% 50%;
-  background-size: auto 100%;
+  background: url("http://petforest.co.kr/wp-content/themes/petforest/images/pt_logo_12_w.png") no-repeat 50% 50%;
+  background-size: contain;
 }
 .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 6) {
-  background: url("http://da-bong.com/dabong/2024/img/partner/logo_08.png") no-repeat 50% 50%;
-  background-size: auto 100%;
+  background: url("http://petforest.co.kr/wp-content/themes/petforest/images/pt_logo_13_w.png") no-repeat 50% 50%;
+  background-size: contain;
 }
 .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 5) {
-  background: url("http://da-bong.com/dabong/2024/img/partner/logo_09.png") no-repeat 50% 50%;
-  background-size: auto 100%;
+  background: url("http://petforest.co.kr/wp-content/themes/petforest/images/pt_logo_14_w.png") no-repeat 50% 50%;
+  background-size: contain;
 }
 .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 4) {
-  background: url("http://da-bong.com/dabong/2024/img/partner/logo_10.png") no-repeat 50% 50%;
-  background-size: auto 100%;
+  background: url("http://petforest.co.kr/wp-content/themes/petforest/images/pt_logo_15_w.png") no-repeat 50% 50%;
+  background-size: contain;
 }
 .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 3) {
-  background: url("http://da-bong.com/dabong/2024/img/partner/logo_11.png") no-repeat 50% 50%;
-  background-size: auto 100%;
+  background: url("http://petforest.co.kr/wp-content/themes/petforest/images/pt_logo_16_w.png") no-repeat 50% 50%;
+  background-size: contain;
 }
 .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 2) {
-  background: url("http://da-bong.com/dabong/2024/img/partner/logo_12.png") no-repeat 50% 50%;
-  background-size: auto 100%;
+  background: url("http://petforest.co.kr/wp-content/themes/petforest/images/pt_logo_17_w.png") no-repeat 50% 50%;
+  background-size: contain;
 }
 .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 1) {
-  background: url("http://da-bong.com/dabong/2024/img/partner/logo_13.png") no-repeat 50% 50%;
-  background-size: auto 100%;
+  background: url("http://petforest.co.kr/wp-content/themes/petforest/images/pt_logo_09_w.png") no-repeat 50% 50%;
+  background-size: contain;
 }
 .partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n) {
-  background: url("http://da-bong.com/dabong/2024/img/partner/logo_14.png") no-repeat 50% 50%;
-  background-size: auto 100%;
+  background: url("http://petforest.co.kr/wp-content/themes/petforest/images/pt_logo_10_w.png") no-repeat 50% 50%;
+  background-size: contain;
 }
 @keyframes partner_marquee1 {
   0% {
