@@ -48,14 +48,14 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
     margin-left: 15px;
   }
 
   .hamburger-menu span {
     display: block;
-    width: 25px;
-    height: 3px;
+    width: 22px;
+    height: 2px;
     background-color: $text-color; /* 햄버거 메뉴가 잘 보이도록 색상 설정 */
     transition: 0.3s ease;
   
@@ -89,7 +89,11 @@
         justify-content: center !important;
       }
       .closebtn{
+        right: 30px;
+        top: 10px;
         display: block;
+        border: none;
+        font-weight:bold;
       }
 
       
@@ -166,7 +170,7 @@
           // font-family: "Noto Sans KR";
           display: flex;
           align-items: center;
-          @media (max-width:320px){
+          @media (max-width:1024px){
             font-size: 12px;
           }
         }
@@ -211,7 +215,7 @@
   margin-right: 22.37px;
   width: 26.013px;
   height: 26.013px;
-  @media (max-width:320px){
+  @media (max-width:1024px){
     margin-right: 0px;
     width: 3rem;
   }
@@ -229,9 +233,24 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
-  @media (max-width:768px) {
-    span {display:none;}
-    width:3rem;
+
+  @media (max-width:1024px) {
+    width:1.7rem;
+    height: 1.7rem;
+    gap: 0;
+    
+    padding: 0;
+    img{
+      width:18px;
+      height: auto;
+    }
+
+
+    span {
+      display:none;
+    }
+    
+   
     
   }
 }
@@ -280,6 +299,9 @@
       overflow: hidden;
       transition: transform 0.5s ease, opacity 0.5s ease;
       border-radius: 20px;
+      @media (max-width:1024px){
+        height: 400px;
+      }
   
       img {
         width: 100%;
@@ -345,6 +367,7 @@
   font-size: 1.125rem;
   color: $primary-color;
   margin-bottom: 40px;
+
 }
 
 #jh h2 {
@@ -661,54 +684,4 @@ padding: 60px 0;
   }
 }
 }
-
-//반응형
-//로고 위치
-@media (max-width: 320px) {
-.logo-container {
-  align-self: flex-start;
-  margin-top: 0;
-}
-}
-@media (min-width: 320px) {
-.logo-container {
-  align-self: center;
-}
-}
-@media (max-width: 320px) {
-.logo {
-  width: 50px;
-  
-}
-}
-
-//상단 bar 메뉴
-@media (max-width: 320px){
-.d1ul {
-  flex-wrap: wrap; /* 작은 화면에서는 메뉴가 두 줄로 나올 수 있게 */
-  gap: 8px;
-}
-
-.d1a {
-  font-size: 14px;
-  gap: 0;
-}
-}
-
-// 예약하기 및 지점위치 
-@media (max-width: 320px) {
-.reservation
- {
-  align-self: flex-start;
-  justify-self: flex-end;
-  margin-top: 0;
-}
-}
-@media (min-width: 320px) {
-.reservation {
-  align-self: center;
-}
-}
-
-
 

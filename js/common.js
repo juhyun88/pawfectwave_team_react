@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // 1. 스크롤 방향 및 상단 고정 결합 처리
       if (isScrolled) {
         body.classList.add('fixed');
-        body.classList.toggle('scrolldown', currentScrollY > lastScrollY);
-        body.classList.toggle('scrollup', currentScrollY < lastScrollY);
+        body.classList.toggle('scrollup', currentScrollY > lastScrollY);
+        body.classList.toggle('scrolldown', currentScrollY < lastScrollY);
       } else {
         body.classList.remove('fixed', 'scrolldown', 'scrollup');
       }
