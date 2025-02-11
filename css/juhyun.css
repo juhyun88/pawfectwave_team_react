@@ -46,8 +46,7 @@
 #hd .topmeun .closebtn {
   display: none;
   position: absolute;
-  right: 0;
-  top: 0;
+  padding: 0;
 }
 @media (max-width: 1024px) {
   #hd .topmeun {
