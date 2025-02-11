@@ -32,7 +32,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const mbtn = document.querySelector(".hamburger-menu");
     const widemenu = document.querySelector(".topmeun");
 
-    const moclose = document.querySelector("#hd .topmeun .closebtn")
+    const moclose = document.querySelector("#hd .topmeun .closebtn");
+    const monavia = document.querySelectorAll(".d1ul > li> a");  // 대메뉴
+
+
+
+
+      const monaviaItems = document.querySelectorAll('.d1ul > li > a');  // Multiple 대메뉴 items
+    
+      if (window.innerWidth <= 1024) {
+
+        monaviaItems.forEach(function(monavia) {
+          monavia.addEventListener('click', function(event) {
+            event.preventDefault();
+    
+            const d2ul = monavia.nextElementSibling; // The sibling .d2ul
+    
+            // Remove .over from all .d2ul elements and toggle it on the clicked one
+            document.querySelectorAll('.d1ul > li > .d2ul').forEach(function(d2ulItem) {
+              d2ulItem.classList.toggle('over', d2ulItem === d2ul);
+            });
+          });
+        });
+        
+      }//// if 마침
+
+    
+    
     
     mbtn.addEventListener('click', function(){
       widemenu.classList.add("wide");
@@ -40,6 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
     moclose.addEventListener('click', function(){
       widemenu.classList.remove("wide");
     })
+
+    
 
 
   });

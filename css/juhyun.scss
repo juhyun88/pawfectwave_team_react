@@ -197,6 +197,14 @@
             line-height: 2;
       
           }
+          @media (max-width:1024px) {
+            position: relative !important;
+            height: auto;
+            max-height: 0;
+            &.over{
+              max-height:200px;
+            }            
+          }
         }
       }
 
@@ -231,7 +239,7 @@
   transition: background-color 0.3s, transform 0.2s;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content:center;
   gap: 5px;
 
   @media (max-width:1024px) {

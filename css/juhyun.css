@@ -154,6 +154,16 @@
   font-size: 16px;
   line-height: 2;
 }
+@media (max-width: 1024px) {
+  #hd .topmeun .d1ul .d1li .d2ul {
+    position: relative !important;
+    height: auto;
+    max-height: 0;
+  }
+  #hd .topmeun .d1ul .d1li .d2ul.over {
+    max-height: 200px;
+  }
+}
 #hd .topmeun .d1ul a:hover {
   color: #006838 !important;
 }
